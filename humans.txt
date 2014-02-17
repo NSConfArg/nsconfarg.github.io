@@ -1,4 +1,4 @@
-# humanstxt.org/
+# humanstxt.org//
 # Los Humanos que hacen posible este proyecto.
 
 # EQUIPO

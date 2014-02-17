@@ -1,0 +1,355 @@
+/* RESET STYLES - EricMeyer */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.nofocus:focus {
+  outline: none; }
+
+.placeholder {
+  color: #aaa; }
+
+/* COMUNES */
+.cleaner {
+  clear: both; }
+
+.wrapper {
+  width: 1280px;
+  margin: 0 auto;
+  position: relative; }
+
+.dimmer {
+  background-color: #000;
+  filter: alpha(opacity=75);
+  -moz-opacity: 0.75;
+  opacity: 0.75;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  width: 100%; }
+
+.noborder {
+  border: none !important; }
+
+.noborderL {
+  border-left: none !important; }
+
+.noborderR {
+  border-right: none !important; }
+
+.noborderT {
+  border-top: none !important; }
+
+.noborderB {
+  border-bottom: none !important; }
+
+.nomargin {
+  margin: 0 !important; }
+
+.nomarginL {
+  margin-left: 0 !important; }
+
+.nomarginR {
+  margin-right: 0 !important; }
+
+.nomarginT {
+  margin-top: 0 !important; }
+
+.nomarginB {
+  margin-bottom: 0 !important; }
+
+.nopadding {
+  padding: 0 !important; }
+
+.nopaddingL {
+  padding-left: 0 !important; }
+
+.nopaddingR {
+  padding-right: 0 !important; }
+
+.nopaddingT {
+  padding-top: 0 !important; }
+
+.nopaddingB {
+  padding-bottom: 0 !important; }
+
+.floaterL {
+  float: left; }
+
+.floaterR {
+  float: right; }
+
+.centered {
+  text-align: center !important; }
+
+.aright {
+  text-align: right !important; }
+
+.aleft {
+  text-align: left !important; }
+
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px; }
+
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%; }
+
+.cf:before, .cf:after {
+  content: " ";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+.cf {
+  *zoom: 1; }
+
+/* MIXINS */
+/* SPLASH CODE */
+body {
+  background: url(../img/bg.jpg) no-repeat top right fixed;
+  background-size: cover;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  line-height: 24px;
+  word-spacing: -1px; }
+
+.dimmer {
+  background: black;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: 1;
+  position: fixed; }
+
+section#content {
+  width: 600px;
+  margin: 50px 50px 30px;
+  text-align: center;
+  z-index: 2;
+  position: relative; }
+  section#content img {
+    width: 150px;
+    margin: 30px 0 20px; }
+  section#content h1 {
+    font-family: "Helvetica Neue" Helvetica, Arial, Verdana, sans-serif;
+    font-weight: lighter;
+    font-size: 80px;
+    color: white;
+    margin-bottom: 20px; }
+  section#content h2 {
+    font-family: "Helvetica Neue" Helvetica, Arial, Verdana, sans-serif;
+    font-weight: lighter;
+    font-size: 24px;
+    color: white;
+    font-weight: 300;
+    margin-bottom: 30px; }
+  section#content p {
+    padding: 5px 0; }
+    section#content p a {
+      color: white; }
+    section#content p img {
+      width: 24px;
+      margin: 20px 0 0 0; }
+
+section#subscribe {
+  width: 600px;
+  margin: 0 0 0 50px;
+  text-align: center;
+  z-index: 2;
+  position: relative; }
+  section#subscribe .input-group {
+    width: 300px;
+    margin: 0 auto; }
+    section#subscribe .input-group input[type="text"] {
+      text-align: center; }
+
+/* ANIMATION */
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+.fade-in {
+  opacity: 0;
+  /* make things invisible upon start */
+  -webkit-animation: fadeIn ease-in 1;
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s; }
+
+.fade-in.one {
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s; }
+
+.fade-in.two {
+  -webkit-animation-delay: 1.2s;
+  -moz-animation-delay: 1.2s;
+  animation-delay: 1.2s; }
+
+.fade-in.three {
+  -webkit-animation-delay: 1.6s;
+  -moz-animation-delay: 1.6s;
+  animation-delay: 1.6s; }
+
+/* MEDIAQUERIES */
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  body {
+    background: url(../img/bg-mobile.jpg) no-repeat center top;
+    background-size: cover; }
+
+  section#content {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 2;
+    position: relative; }
+    section#content img {
+      width: 60px;
+      margin: 20px 0 20px; }
+    section#content h1 {
+      font-family: "Helvetica Neue" Helvetica, Arial, Verdana, sans-serif;
+      font-weight: lighter;
+      font-size: 30px;
+      color: white;
+      margin: 20px 0 10px; }
+    section#content h2 {
+      font-family: "Helvetica Neue" Helvetica, Arial, Verdana, sans-serif;
+      font-weight: lighter;
+      font-size: 24px;
+      color: white;
+      font-weight: 300;
+      margin-bottom: 20px; }
+    section#content p {
+      font-size: 12px;
+      line-height: 14px;
+      position: relative; }
+      section#content p img {
+        width: 16px; }
+
+  section#subscribe {
+    width: 90%;
+    margin: 20px auto 0;
+    text-align: center;
+    z-index: 2;
+    position: relative; }
+    section#subscribe .input-group {
+      width: 90%;
+      margin: 0 auto; }
+      section#subscribe .input-group input[type="email"] {
+        text-align: center;
+        font-size: 11px; } }
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  /* Styles */ }
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  body {
+    background: url(../img/bg-mobile.jpg) no-repeat center top;
+    background-size: cover; }
+
+  section#content {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 2;
+    position: relative; }
+    section#content img {
+      width: 120px;
+      margin: 50px 0 20px; }
+    section#content h1 {
+      font-family: "Helvetica Neue" Helvetica, Arial, Verdana, sans-serif;
+      font-weight: lighter;
+      font-size: 60px;
+      color: white;
+      margin: 250px 0 20px; }
+    section#content h2 {
+      font-family: "Helvetica Neue" Helvetica, Arial, Verdana, sans-serif;
+      font-weight: lighter;
+      font-size: 24px;
+      color: white;
+      font-weight: 300;
+      margin-bottom: 30px; }
+    section#content p {
+      font-size: 16px; }
+
+  section#subscribe {
+    width: 90%;
+    margin: 35px auto 0;
+    text-align: center;
+    z-index: 2;
+    position: relative; }
+    section#subscribe .input-group {
+      width: 50%;
+      margin: 0 auto; }
+      section#subscribe .input-group input[type="text"] {
+        text-align: center;
+        font-size: 16px; } }
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */ }
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Styles */ }
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */ }
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */ }
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  body {
+    background: url("img/bg-mobile.png") no-repeat centered;
+    background-size: cover; } }

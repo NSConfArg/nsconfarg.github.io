@@ -1,26 +1,32 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>NSConf Argentina</title>
-  </head>
-  <body>
-    <!--
-      Típico developer ansioso que no puede esperar y se mete a ver el código esperando encontrar algo más de info.
-      
-      Ok, a vos te cuento que tenemos fecha para el 12 de abril. Reservala, pero no cuentes.
-    -->
-    <p>Muy, pero muy pronto vamos a tener novedades.</p>
-    <p>Mientras tanto, seguinos en <a href="http://twitter.com/nsconfarg">twitter</a>.</p>
-    <!--<script>window.location.replace("http://nscoderba.tumblr.com");</script>-->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-48044602-1', 'nsconfarg.com');
-      ga('send', 'pageview');
-
-    </script>
-  </body>
-</html>
+<!-- $title Index page -->
+<!-- @include _header -->
+<div class="dimmer"></div>
+<section id="content">
+  <img src="<!-- @path nsconfarg.png -->" alt="NSConf Argentina" class="fade-in one">
+  <h1 class="box fade-in two">NSConf Argentina</h1>
+  <!--<h2>Estamos preparando todo para la NSConf Argentina</h2>-->
+  <div class="box fade-in two">
+    <p>Muy pronto vamos a estar haciendo en Buenos Aires la primer NSConf Argentina, una conferencia con charlas técnicas en español para developers de iOS y Mac.</p>
+    <p>Estamos preparando un equipo de oradores de primera, en un lugar cómodo y accesible.</p>
+    <p>Déjanos tu mail y te avisamos cuando hayamos definido la fecha y los contenidos. La inscripción será gratuita, pero limitada, no te quedes afuera!</p>
+    <p class="nomargin nopadding"><img src="<!-- @path twitter.png -->" alt="Twitter Stuff"></p>
+    <p><a href="http://twitter.com/nsconfarg" target="_blank">@nsconfarg</a> | #nsconfarg</p>
+  </div>
+</section>
+<section id="subscribe" class="fade-in three">
+  <div class="error_box"></div>
+  <form name="contactForm" action="#" method="POST" id="contactForm">
+    <!-- send mail configuration -->
+    <input type="hidden" value="carlosbruscoli@gmail.com" name="to" id="to" />
+    <input type="hidden" value="nsconfarg.com Landing :: Subscriber" name="subject" id="subject" />
+    <input type="hidden" value="send-mail.php" name="sendMailUrl" id="sendMailUrl" />
+    <!-- ENDS send mail configuration -->
+    <div class="input-group">
+      <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+      <input type="email" id="email" name="email" class="form-control" placeholder="prometemos no spammear">
+      <span class="input-group-btn"><button class="btn btn-success" type="submit" name="submit" id="submit">Go!</button></span>
+    </div>
+  </form>
+  <p id="sent-form-msg" class="success">Datos enviados, muy pronto nos pondremos en contacto.</p>
+</section>
+<!-- @include _footer -->

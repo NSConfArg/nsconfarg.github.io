@@ -1,0 +1,526 @@
+<p><a href="http://html5boilerplate.com">HTML5 Boilerplate homepage</a> | <a href="TOC.md">Documentation
+table of contents</a></p>
+
+<h1>Extend and customise HTML5 Boilerplate</h1>
+
+<p>Here is some useful advice for how you can make your project with HTML5
+Boilerplate even better. We don’t want to include it all by default, as not
+everything fits with everyone’s needs.</p>
+
+<h2>DNS prefetching</h2>
+
+<p>In short, DNS Prefetching is a method of informing the browser of domain names
+referenced on a site so that the client can resolve the DNS for those hosts,
+cache them, and when it comes time to use them, have a faster turn around on
+the request.</p>
+
+<h3>Implicit prefetches</h3>
+
+<p>There is a lot of prefetching done for you automatically by the browser. When
+the browser encounters an anchor in your html that does not share the same
+domain name as the current location the browser requests, from the client OS,
+the IP address for this new domain. The client first checks its cache and
+then, lacking a cached copy, makes a request from a DNS server. These requests
+happen in the background and are not meant to block the rendering of the
+page.</p>
+
+<p>The goal of this is that when the foreign IP address is finally needed it will
+already be in the client cache and will not block the loading of the foreign
+content. Less requests result in faster page load times. The perception of this
+is increased on a mobile platform where DNS latency can be greater.</p>
+
+<h4>Disable implicit prefetching</h4>
+
+<p><code>html
+&lt;meta http-equiv="x-dns-prefetch-control" content="off"&gt;
+</code></p>
+
+<p>Even with X-DNS-Prefetch-Control meta tag (or http header) browsers will still
+prefetch any explicit dns-prefetch links.</p>
+
+<p><strong><em>WARNING:</em></strong> THIS MAY MAKE YOUR SITE SLOWER IF YOU RELY ON RESOURCES FROM
+FOREIGN DOMAINS.</p>
+
+<h3>Explicit prefetches</h3>
+
+<p>Typically the browser only scans the HTML for foreign domains. If you have
+resources that are outside of your HTML (a javascript request to a remote
+server or a CDN that hosts content that may not be present on every page of
+your site, for example) then you can queue up a domain name to be prefetched.</p>
+
+<p><code>html
+&lt;link rel="dns-prefetch" href="//example.com"&gt;
+&lt;link rel="dns-prefetch" href="//ajax.googleapis.com"&gt;
+</code></p>
+
+<p>You can use as many of these as you need, but it’s best if they are all
+immediately after the <a href="https://developer.mozilla.org/en/HTML/Element/meta#attr-charset">Meta
+Charset</a>
+element (which should go right at the top of the <code>head</code>), so the browser can
+act on them ASAP.</p>
+
+<h4>Common Prefetch Links</h4>
+
+<p>Amazon S3:</p>
+
+<p><code>html
+&lt;link rel="dns-prefetch" href="//s3.amazonaws.com"&gt;
+</code></p>
+
+<p>Google APIs:</p>
+
+<p><code>html
+&lt;link rel="dns-prefetch" href="//ajax.googleapis.com"&gt;
+</code></p>
+
+<p>Microsoft Ajax Content Delivery Network:</p>
+
+<p><code>html
+&lt;link rel="dns-prefetch" href="//ajax.microsoft.com"&gt;
+&lt;link rel="dns-prefetch" href="//ajax.aspnetcdn.com"&gt;
+</code></p>
+
+<h3>Browser support for DNS prefetching</h3>
+
+<p>Chrome, Firefox 3.5+, Safari 5+, Opera (Unknown), IE 9 (called “Pre-resolution”
+on blogs.msdn.com)</p>
+
+<h3>Further reading about DNS prefetching</h3>
+
+<ul>
+  <li>https://developer.mozilla.org/En/Controlling_DNS_prefetching</li>
+  <li>http://dev.chromium.org/developers/design-documents/dns-prefetching</li>
+  <li>http://www.apple.com/safari/whats-new.html</li>
+  <li>http://blogs.msdn.com/b/ie/archive/2011/03/17/internet-explorer-9-network-performance-improvements.aspx</li>
+  <li>http://dayofjs.com/videos/22158462/web-browsers_alex-russel</li>
+</ul>
+
+<h2>Search</h2>
+
+<h3>Direct search spiders to your sitemap</h3>
+
+<p><a href="http://www.sitemaps.org/protocol.php">Learn how to make a sitemap</a></p>
+
+<p><code>html
+&lt;link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml"&gt;
+</code></p>
+
+<h3>Hide pages from search engines</h3>
+
+<p>According to Heather Champ, former community manager at Flickr, you should not
+allow search engines to index your “Contact Us” or “Complaints” page if you
+value your sanity. This is an HTML-centric way of achieving that.</p>
+
+<p><code>html
+&lt;meta name="robots" content="noindex"&gt;
+</code></p>
+
+<p><strong><em>WARNING:</em></strong> DO NOT INCLUDE ON PAGES THAT SHOULD APPEAR IN SEARCH ENGINES.</p>
+
+<h3>Firefox and IE Search Plugins</h3>
+
+<p>Sites with in-site search functionality should be strongly considered for a
+browser search plugin. A “search plugin” is an XML file which defines how your
+plugin behaves in the browser. <a href="http://www.google.com/search?ie=UTF-8&amp;q=how+to+make+browser+search+plugin">How to make a browser search
+plugin</a>.</p>
+
+<p><code>html
+&lt;link rel="search" title="" type="application/opensearchdescription+xml" href=""&gt;
+</code></p>
+
+<h2>Internet Explorer</h2>
+
+<h3>Prompt users to switch to “Desktop Mode” in IE10 Metro</h3>
+
+<p>IE10 does not support plugins, such as Flash, in Metro mode. If your site
+requires plugins, you can let users know that via the X-UA-Compatible meta
+element, which will prompt them to switch to Desktop Mode.</p>
+
+<p><code>html
+&lt;meta http-equiv="X-UA-Compatible" content="requiresActiveX=true"&gt;
+</code></p>
+
+<p>Here’s what it looks like alongside H5BP’s default X-UA-Compatible values:</p>
+
+<p><code>html
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1,requiresActiveX=true"&gt;
+</code></p>
+
+<p>You can find more information in <a href="http://blogs.msdn.com/b/ie/archive/2012/01/31/web-sites-and-a-plug-in-free-web.aspx">Microsoft’s IEBlog post about prompting for
+plugin use in IE10 Metro
+Mode</a>.</p>
+
+<h3>IE Pinned Sites (IE9+)</h3>
+
+<p>Enabling your application for pinning will allow IE9 users to add it to their
+Windows Taskbar and Start Menu. This comes with a range of new tools that you
+can easily configure with the elements below. See more <a href="http://msdn.microsoft.com/en-us/library/gg131029.aspx">documentation on IE9
+Pinned Sites</a>.</p>
+
+<h3>Name the Pinned Site for Windows</h3>
+
+<p>Without this rule, Windows will use the page title as the name for your
+application.</p>
+
+<p><code>html
+&lt;meta name="application-name" content="Sample Title"&gt;
+</code></p>
+
+<h3>Give your Pinned Site a tooltip</h3>
+
+<p>You know — a tooltip. A little textbox that appears when the user holds their
+mouse over your Pinned Site’s icon.</p>
+
+<p><code>html
+&lt;meta name="msapplication-tooltip" content="A description of what this site does."&gt;
+</code></p>
+
+<h3>Set a default page for your Pinned Site</h3>
+
+<p>If the site should go to a specific URL when it is pinned (such as the
+homepage), enter it here. One idea is to send it to a special URL so you can
+track the number of pinned users, like so:
+<code>http://www.example.com/index.html?pinned=true</code></p>
+
+<p><code>html
+&lt;meta name="msapplication-starturl" content="http://www.example.com/index.html?pinned=true"&gt;
+</code></p>
+
+<h3>Recolor IE’s controls manually for a Pinned Site</h3>
+
+<p>IE9+ will automatically use the overall color of your Pinned Site’s favicon to
+shade its browser buttons. UNLESS you give it another color here. Only use
+named colors (<code>red</code>) or hex colors (<code>#ff0000</code>).</p>
+
+<p><code>html
+&lt;meta name="msapplication-navbutton-color" content="#ff0000"&gt;
+</code></p>
+
+<h3>Manually set the window size of a Pinned Site</h3>
+
+<p>If the site should open at a certain window size once pinned, you can specify
+the dimensions here. It only supports static pixel dimensions. 800x600
+minimum.</p>
+
+<p><code>html
+&lt;meta name="msapplication-window" content="width=800;height=600"&gt;
+</code></p>
+
+<h3>Jump List “Tasks” for Pinned Sites</h3>
+
+<p>Add Jump List Tasks that will appear when the Pinned Site’s icon gets a
+right-click. Each Task goes to the specified URL, and gets its own mini icon
+(essentially a favicon, a 16x16 .ICO). You can add as many of these as you
+need.</p>
+
+<p><code>html
+&lt;meta name="msapplication-task" content="name=Task 1;action-uri=http://host/Page1.html;icon-uri=http://host/icon1.ico"&gt;
+&lt;meta name="msapplication-task" content="name=Task 2;action-uri=http://microsoft.com/Page2.html;icon-uri=http://host/icon2.ico"&gt;
+</code></p>
+
+<h3>(Windows 8) High quality visuals for Pinned Sites</h3>
+
+<p>Windows 8 adds the ability for you to provide a PNG tile image and specify the
+tile’s background color. <a href="http://blogs.msdn.com/b/ie/archive/2012/06/08/high-quality-visuals-for-pinned-sites-in-windows-8.aspx">Full details on the IE
+blog</a>.</p>
+
+<ul>
+  <li>Create a 144x144 image of your site icon, filling all of the canvas, and
+using a transparent background.</li>
+  <li>Save this image as a 32-bit PNG and optimize it without reducing
+colour-depth. It can be named whatever you want (e.g. <code>metro-tile.png</code>).</li>
+  <li>To reference the tile and its color, add the HTML <code>meta</code> elements described
+in the IE Blog post.</li>
+</ul>
+
+<h3>(Windows 8) Badges for Pinned Sites</h3>
+
+<p>IE10 will poll an XML document for badge information to display on your app’s
+tile in the Start screen. The user will be able to receive these badge updates
+even when your app isn’t actively running. The badge’s value can be a number,
+or one of a predefined list of glyphs.</p>
+
+<ul>
+  <li><a href="http://blogs.msdn.com/b/ie/archive/2012/04/03/pinned-sites-in-windows-8.aspx">Tutorial on IEBlog with link to badge XML schema</a></li>
+  <li><a href="http://msdn.microsoft.com/en-us/library/ie/br212849.aspx">Available badge values</a></li>
+</ul>
+
+<p><code>html
+&lt;meta name="msapplication-badge" value="frequency=NUMBER_IN_MINUTES;polling-uri=http://www.example.com/path/to/file.xml"&gt;
+</code></p>
+
+<h3>Disable link highlighting upon tap in IE10</h3>
+
+<p>Similar to <a href="http://davidwalsh.name/mobile-highlight-color">-webkit-tap-highlight-color</a>
+in iOS Safari. Unlike that CSS property, this is an HTML meta element, and it’s
+value is boolean rather than a color. It’s all or nothing.</p>
+
+<p><code>html
+&lt;meta name="msapplication-tap-highlight" content="no" /&gt;
+</code></p>
+
+<p>You can read about this useful element and more techniques in
+<a href="http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx">Microsoft’s documentation on adapting WebKit-oriented apps for IE10</a>.</p>
+
+<h3>Suppress IE6 image toolbar</h3>
+
+<p>Kill IE6’s pop-up-on-mouseover toolbar for images that can interfere with
+certain designs and be pretty distracting in general.</p>
+
+<p><code>html
+&lt;meta http-equiv="imagetoolbar" content="false"&gt;
+</code></p>
+
+<h2>Social Networks</h2>
+
+<h3>Facebook Open Graph data</h3>
+
+<p>You can control the information that Facebook and others display when users
+share your site. Below are just the most basic data points you might need. For
+specific content types (including “website”), see <a href="https://developers.facebook.com/docs/opengraph/objects/builtin/">Facebook’s built-in Open
+Graph content
+templates</a>.
+Take full advantage of Facebook’s support for complex data and activity by
+following the <a href="https://developers.facebook.com/docs/opengraph/tutorial/">Open Graph
+tutorial</a>.</p>
+
+<p><code>html
+&lt;meta property="og:title" content=""&gt;
+&lt;meta property="og:description" content=""&gt;
+&lt;meta property="og:image" content=""&gt;
+</code></p>
+
+<h3>Twitter Cards</h3>
+
+<p>Twitter provides a snippet specification that serves a similar purpose to Open
+Graph. In fact, Twitter will use Open Graph when Cards is not available. Note
+that, as of this writing, Twitter requires that app developers activate Cards
+on a per-domain basis. You can read more about the various snippet formats
+and application process in the <a href="https://dev.twitter.com/docs/cards">official Twitter Cards
+documentation</a>.</p>
+
+<p><code>html
+&lt;meta name="twitter:card" content="summary"&gt;
+&lt;meta name="twitter:site" content="@site_account"&gt;
+&lt;meta name="twitter:creator" content="@individual_account"&gt;
+&lt;meta name="twitter:url" content="http://www.example.com/path/to/page.html"&gt;
+&lt;meta name="twitter:title" content=""&gt;
+&lt;meta name="twitter:description" content=""&gt;
+&lt;meta name="twitter:image" content="http://www.example.com/path/to/image.jpg"&gt;
+</code></p>
+
+<h2>URLs</h2>
+
+<h3>Canonical URL</h3>
+
+<p>Signal to search engines and others “Use this URL for this page!” Useful when
+parameters after a <code>#</code> or <code>?</code> is used to control the display state of a page.
+<code>http://www.example.com/cart.html?shopping-cart-open=true</code> can be indexed as
+the cleaner, more accurate <code>http://www.example.com/cart.html</code>.</p>
+
+<p><code>html
+&lt;link rel="canonical" href=""&gt;
+</code></p>
+
+<h3>Official shortlink</h3>
+
+<p>Signal to the world “This is the shortened URL to use this page!” Poorly
+supported at this time. Learn more by reading the <a href="http://microformats.org/wiki/rel-shortlink">article about shortlinks on
+the Microformats wiki</a>.</p>
+
+<p><code>html
+&lt;link rel="shortlink" href="h5bp.com"&gt;
+</code></p>
+
+<h2>News Feeds</h2>
+
+<h3>RSS</h3>
+
+<p>Have an RSS feed? Link to it here. Want to <a href="http://www.rssboard.org/rss-specification">learn how to write an RSS feed from
+scratch</a>?</p>
+
+<p><code>html
+&lt;link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml"&gt;
+</code></p>
+
+<h3>Atom</h3>
+
+<p>Atom is similar to RSS, and you might prefer to use it instead of or in
+addition to it. <a href="http://www.atomenabled.org/developers/syndication/">See what Atom’s all
+about</a>.</p>
+
+<p><code>html
+&lt;link rel="alternate" type="application/atom+xml" title="Atom" href="/atom.xml"&gt;
+</code></p>
+
+<h3>Pingbacks</h3>
+
+<p>Your server may be notified when another site links to yours. The href
+attribute should contain the location of your pingback service.</p>
+
+<p><code>html
+&lt;link rel="pingback" href=""&gt;
+</code></p>
+
+<ul>
+  <li>High-level explanation: http://codex.wordpress.org/Introduction_to_Blogging#Pingbacks</li>
+  <li>Step-by-step example case: http://www.hixie.ch/specs/pingback/pingback-1.0#TOC5</li>
+  <li>PHP pingback service: http://blog.perplexedlabs.com/2009/07/15/xmlrpc-pingbacks-using-php/</li>
+</ul>
+
+<h2>App Stores</h2>
+
+<h3>Install a Chrome Web Store app</h3>
+
+<p>Users can install a Chrome app directly from your website, as long as the app
+and site have been associated via Google’s Webmaster Tools. Read more on
+<a href="https://developers.google.com/chrome/web-store/docs/inline_installation">Chrome Web Store’s Inline Installation
+docs</a>.</p>
+
+<p><code>html
+&lt;link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/APP_ID"&gt;
+</code></p>
+
+<h3>Smart App Banners in iOS 6 Safari</h3>
+
+<p>Stop bothering everyone with gross modals advertising your entry in the App Store.
+This bit of code will unintrusively allow the user the option to download your iOS
+app, or open it with some data about the user’s current state on the website.</p>
+
+<p><code>html
+&lt;meta name="apple-itunes-app" content="app-id=APP_ID,app-argument=SOME_TEXT"&gt;
+</code></p>
+
+<h2>Google Analytics augments</h2>
+
+<h3>More tracking settings</h3>
+
+<p>The <a href="http://mathiasbynens.be/notes/async-analytics-snippet">optimized Google Analytics
+snippet</a> included with
+HTML5 Boilerplate includes something like this:</p>
+
+<p><code>js
+var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
+</code></p>
+
+<p>In case you need more settings, just extend the array literal instead of
+<a href="http://mathiasbynens.be/notes/async-analytics-snippet#dont-push-it"><code>.push()</code>ing to the
+array</a>
+afterwards:</p>
+
+<p><code>js
+var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview'], ['_setAllowAnchor', true]];
+</code></p>
+
+<h3>Anonymize IP addresses</h3>
+
+<p>In some countries, no personal data may be transferred outside jurisdictions
+that do not have similarly strict laws (i.e. from Germany to outside the EU).
+Thus a webmaster using the Google Analytics script may have to ensure that no
+personal (trackable) data is transferred to the US. You can do that with <a href="http://code.google.com/apis/analytics/docs/gaJS/gaJSApi_gat.html#_gat._anonymizeIp">the
+<code>_gat.anonymizeIp</code>
+option</a>.
+In use it looks like this:</p>
+
+<p><code>js
+var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_gat._anonymizeIp'], ['_trackPageview']];
+</code></p>
+
+<h3>Track jQuery AJAX requests in Google Analytics</h3>
+
+<p>An article by @JangoSteve explains how to <a href="http://www.alfajango.com/blog/track-jquery-ajax-requests-in-google-analytics/">track jQuery AJAX requests in Google
+Analytics</a>.</p>
+
+<p>Add this to <code>plugins.js</code>:</p>
+
+<p><code>js
+/*
+ * Log all jQuery AJAX requests to Google Analytics
+ * See: http://www.alfajango.com/blog/track-jquery-ajax-requests-in-google-analytics/
+ */
+if (typeof _gaq !== "undefined" &amp;&amp; _gaq !== null) {
+    $(document).ajaxSend(function(event, xhr, settings){
+        _gaq.push(['_trackPageview', settings.url]);
+    });
+}
+</code></p>
+
+<h3>Track JavaScript errors in Google Analytics</h3>
+
+<p>Add this function after <code>_gaq</code> is defined:</p>
+
+<p><code>js
+(function(window){
+    var undefined,
+        link = function (href) {
+            var a = window.document.createElement('a');
+            a.href = href;
+            return a;
+        };
+    window.onerror = function (message, file, row) {
+        var host = link(file).hostname;
+        _gaq.push([
+            '_trackEvent',
+            (host == window.location.hostname || host == undefined || host == '' ? '' : 'external ') + 'error',
+            message, file + ' LINE: ' + row, undefined, undefined, true
+        ]);
+    };
+}(window));
+</code></p>
+
+<h3>Track page scroll</h3>
+
+<p>Add this function after <code>_gaq</code> is defined:</p>
+
+<p>```js
+$(function(){
+    var isDuplicateScrollEvent,
+        scrollTimeStart = new Date,
+        $window = $(window),
+        $document = $(document),
+        scrollPercent;</p>
+
+<pre><code>$window.scroll(function() {
+    scrollPercent = Math.round(100 * ($window.height() + $window.scrollTop())/$document.height());
+    if (scrollPercent &gt; 90 &amp;&amp; !isDuplicateScrollEvent) { //page scrolled to 90%
+        isDuplicateScrollEvent = 1;
+        _gaq.push(['_trackEvent', 'scroll',
+            'Window: ' + $window.height() + 'px; Document: ' + $document.height() + 'px; Time: ' + Math.round((new Date - scrollTimeStart )/1000,1) + 's',
+            undefined, undefined, true
+        ]);
+    }
+}); }); ```
+</code></pre>
+
+<h2>Miscellaneous</h2>
+
+<ul>
+  <li>
+    <p>Use <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills">HTML5
+polyfills</a>.</p>
+  </li>
+  <li>
+    <p>Use <a href="http://microformats.org/wiki/Main_Page">Microformats</a> (via
+<a href="http://microformats.org/wiki/microdata">microdata</a>) for optimum search
+results
+<a href="http://googlewebmastercentral.blogspot.com/2009/05/introducing-rich-snippets.html">visibility</a>.</p>
+  </li>
+  <li>
+    <p>If you’re building a web app you may want <a href="http://johanbrook.com/browsers/native-momentum-scrolling-ios-5/">native style momentum scrolling in
+iOS5</a> using
+<code>-webkit-overflow-scrolling: touch</code>.</p>
+  </li>
+  <li>
+    <p>Avoid development/stage websites “leaking” into SERPs (search engine results
+page) by <a href="https://github.com/h5bp/html5-boilerplate/issues/804">implementing X-Robots-tag
+headers</a>.</p>
+  </li>
+  <li>
+    <p>Screen readers currently have less-than-stellar support for HTML5 but the JS
+script <a href="https://github.com/yatil/accessifyhtml5.js">accessifyhtml5.js</a> can
+help increase accessibility by adding ARIA roles to HTML5 elements.</p>
+  </li>
+</ul>
+
+<p><em>Many thanks to <a href="https://github.com/brianblakely">Brian Blakely</a> for
+contributing much of this information.</em></p>

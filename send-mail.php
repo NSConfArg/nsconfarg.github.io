@@ -2,7 +2,7 @@
 
 //vars
 $subject = 'Email Confirmacion Nuevo Asistente';
-$to = 'carlosbruscoli@gmail.com';
+$to = 'mariano@zerously.com';
 
 $from = 'nscfonfarg.com Website';
 

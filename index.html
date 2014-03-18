@@ -10,31 +10,6 @@
     <meta name="description" content="charlas técnicas en español para developers de iOS y Mac">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
     <link type="text/plain" rel="author" href="humans.txt" />    
-  
-    <!-- @todo remove reload -->
-    
-        <!-- Hammer reload -->
-          <script>
-            setInterval(function(){
-              try {
-                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
-                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
-                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
-                ws.onmessage = function(){
-                  var links = document.getElementsByTagName('link'); 
-                    for (var i = 0; i < links.length;i++) { 
-                    var link = links[i]; 
-                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
-                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
-                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
-                    }
-                  }
-                }
-              }catch(e){}
-            }, 1000)
-          </script>
-        <!-- /Hammer reload -->
-      
 
     <link rel='stylesheet' href='css/animate.css'>
 <link rel='stylesheet' href='css/screen.css'>
@@ -72,7 +47,7 @@
   <div class="bondi"><img src="img/icon-bondi.png" alt="Colectivos" /><span>Lineas de Colectivo</span>92 - 106 - 109 - 128</div>
   <div class="subteb"><img src="img/icon-subte.png" alt="Subte B" /><span>Subte Linea B</span>Estacion Medrano</div>
   <div class="subted"><img src="img/icon-subte-d.png" alt="Subte D" /><span>Subte Linea D</span>Estacion Bulnes</div>
-  <div class="comollego"><a href="http://comollego.ba.gob.ar/" target="_blank"><img src="img/comollego.png" alt="Mas info en ComoLlego"></a></div>
+  <div class="comollego"><a href="http://mapa.buenosaires.gob.ar/index.phtml?hasta=bravo%20mario%201050&modo=transporte#" target="_blank"><img src="img/comollego.png" alt="Mas info en ComoLlego"></a></div>
 </section>
 <section id="oradores">
   <header>

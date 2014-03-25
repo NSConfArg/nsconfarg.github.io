@@ -459,12 +459,18 @@ section#registracion {
       top: 260px;
       left: 90px; }
     section#registracion .eventioz h2 {
-      font-size: 22px;
-      color: black;
+      font-size: 30px;
       position: absolute;
-      top: 320px;
+      top: 360px;
       left: 65px;
-      width: 250px; }
+      width: 250px;
+      font-weight: 700;
+      color: red;
+      -webkit-transform: rotate(-25deg);
+      -moz-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      -o-transform: rotate(-25deg);
+      filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); }
     section#registracion .eventioz a {
       position: absolute;
       top: 420px;

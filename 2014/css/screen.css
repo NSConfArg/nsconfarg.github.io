@@ -1,0 +1,1159 @@
+/* RESET STYLES - EricMeyer */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.nofocus:focus {
+  outline: none; }
+
+.placeholder {
+  color: #aaa; }
+
+/* COMUNES */
+.cleaner {
+  clear: both; }
+
+.wrapper {
+  width: 1280px;
+  margin: 0 auto;
+  position: relative; }
+
+.dimmer {
+  background-color: #000;
+  filter: alpha(opacity=75);
+  -moz-opacity: 0.75;
+  opacity: 0.75;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  width: 100%; }
+
+.noborder {
+  border: none !important; }
+
+.noborderL {
+  border-left: none !important; }
+
+.noborderR {
+  border-right: none !important; }
+
+.noborderT {
+  border-top: none !important; }
+
+.noborderB {
+  border-bottom: none !important; }
+
+.nomargin {
+  margin: 0 !important; }
+
+.nomarginL {
+  margin-left: 0 !important; }
+
+.nomarginR {
+  margin-right: 0 !important; }
+
+.nomarginT {
+  margin-top: 0 !important; }
+
+.nomarginB {
+  margin-bottom: 0 !important; }
+
+.nopadding {
+  padding: 0 !important; }
+
+.nopaddingL {
+  padding-left: 0 !important; }
+
+.nopaddingR {
+  padding-right: 0 !important; }
+
+.nopaddingT {
+  padding-top: 0 !important; }
+
+.nopaddingB {
+  padding-bottom: 0 !important; }
+
+.floaterL {
+  float: left; }
+
+.floaterR {
+  float: right; }
+
+.centered {
+  text-align: center !important; }
+
+.aright {
+  text-align: right !important; }
+
+.aleft {
+  text-align: left !important; }
+
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px; }
+
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%; }
+
+.cf:before, .cf:after {
+  content: " ";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+.cf {
+  *zoom: 1; }
+
+/* LAYOUT */
+.col2 {
+  width: 200px;
+  float: left; }
+
+.col3 {
+  width: 300px;
+  float: left; }
+
+.col4 {
+  width: 400px;
+  float: left; }
+
+.col8 {
+  width: 800px;
+  float: left; }
+
+.col9 {
+  width: 900px;
+  float: left; }
+
+.col10 {
+  width: 1000px;
+  float: left; }
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  color: #515151; }
+
+h1, h2, h3, h4 {
+  color: white;
+  text-align: center;
+  font-weight: 100; }
+
+/* HEADER */
+nav#main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background: black;
+  width: 100vw; }
+  nav#main ul {
+    text-align: center;
+    padding: 15px; }
+    nav#main ul li {
+      display: inline;
+      margin: 0 40px; }
+      nav#main ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        padding-bottom: 12px; }
+      nav#main ul li a.here {
+        border-bottom: 3px solid white; }
+
+/* COVER */
+section#cover {
+  background: url(../img/bg-cover.jpg) no-repeat 50% 0 fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9; }
+  section#cover img#logo {
+    position: relative;
+    margin-top: 90px;
+    left: 50%;
+    margin-left: -52px; }
+  section#cover h1 {
+    font-size: 60px;
+    margin: 30px 0 20px; }
+  section#cover h2 {
+    font-size: 40px;
+    margin: 0 0 20px; }
+  section#cover h3 {
+    font-size: 30px;
+    margin: 0 0 20px; }
+  section#cover h4 {
+    font-size: 18px;
+    margin: 0 15% 20px;
+    line-height: 26px; }
+  section#cover p.host {
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    position: relative;
+    margin: 80px 0 20px; }
+    section#cover p.host a {
+      color: white;
+      text-decoration: none; }
+  section#cover p.social, section#cover p.hashtag {
+    text-align: center;
+    color: white;
+    margin: 15px 0; }
+    section#cover p.social a, section#cover p.hashtag a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none; }
+
+/* LOCATION */
+section#ubicacion {
+  height: 100vh;
+  z-index: 10;
+  background: url(../img/bg-location.jpg) no-repeat 50% 100px;
+  background-size: cover;
+  position: relative; }
+  section#ubicacion header {
+    background: white;
+    text-align: center;
+    padding-bottom: 20px; }
+    section#ubicacion header img {
+      margin: 80px 0 20px; }
+    section#ubicacion header h1, section#ubicacion header h2 {
+      color: black; }
+    section#ubicacion header h1 {
+      font-size: 40px;
+      margin: 0 0 20px; }
+    section#ubicacion header h2 {
+      font-size: 20px;
+      margin: 0 auto 20px;
+      width: 60%;
+      text-align: center;
+      line-height: 28px; }
+      section#ubicacion header h2 strong {
+        font-weight: 400; }
+  section#ubicacion .bondi {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: url(../img/bg-beacon.png) 0 0 repeat;
+    padding: 10px;
+    border-radius: 5px;
+    line-height: 16px;
+    width: 230px; }
+    section#ubicacion .bondi img {
+      margin: 0 10px 0 0;
+      vertical-align: middle;
+      float: left; }
+    section#ubicacion .bondi span {
+      font-size: 12px;
+      font-weight: bold;
+      display: block;
+      padding-top: 10px; }
+  section#ubicacion .subted {
+    position: absolute;
+    bottom: 20px;
+    left: 290px;
+    background: url(../img/bg-beacon.png) 0 0 repeat;
+    padding: 10px;
+    border-radius: 5px;
+    line-height: 16px;
+    width: 190px; }
+    section#ubicacion .subted img {
+      margin: 0 10px 0 0;
+      vertical-align: middle;
+      float: left; }
+    section#ubicacion .subted span {
+      font-size: 12px;
+      font-weight: bold;
+      display: block;
+      padding-top: 10px; }
+  section#ubicacion .subteb {
+    position: absolute;
+    bottom: 20px;
+    left: 520px;
+    background: url(../img/bg-beacon.png) 0 0 repeat;
+    padding: 10px;
+    border-radius: 5px;
+    line-height: 16px;
+    width: 190px; }
+    section#ubicacion .subteb img {
+      margin: 0 10px 0 0;
+      vertical-align: middle;
+      float: left; }
+    section#ubicacion .subteb span {
+      font-size: 12px;
+      font-weight: bold;
+      display: block;
+      padding-top: 10px; }
+  section#ubicacion .comollego {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: url(../img/bg-beacon.png) 0 0 repeat;
+    padding: 10px;
+    border-radius: 5px;
+    line-height: 16px;
+    width: 120px; }
+    section#ubicacion .comollego img {
+      margin: 0 10px 0 0;
+      vertical-align: middle;
+      float: left; }
+
+/* ORADORES */
+section#oradores {
+  z-index: 10;
+  position: relative;
+  padding-bottom: 30px; }
+  section#oradores h1, section#oradores h2, section#oradores h3, section#oradores h4 {
+    color: black; }
+  section#oradores header {
+    background: white;
+    text-align: center;
+    padding-bottom: 20px; }
+    section#oradores header img {
+      margin: 80px 0 20px; }
+    section#oradores header h1 {
+      font-size: 40px;
+      margin: 0 0 20px; }
+    section#oradores header h2 {
+      font-size: 20px;
+      margin: 0 auto 20px;
+      width: 40%;
+      text-align: center;
+      line-height: 28px; }
+  section#oradores .block {
+    text-align: center;
+    min-height: 400px;
+    margin: 0 10px; }
+    section#oradores .block h3 {
+      font-size: 20px;
+      margin: 20px 0 10px;
+      font-weight: 200; }
+    section#oradores .block h4 {
+      font-size: 14px;
+      margin: 0 0 10px;
+      font-weight: 200; }
+      section#oradores .block h4 a {
+        color: black;
+        text-decoration: none; }
+    section#oradores .block p {
+      line-height: 22px;
+      padding: 10px 20px; }
+
+/* CHARLAS */
+section#programa {
+  z-index: 10;
+  position: relative;
+  background: url(../img/bg-blackboard.jpg) 50% 0 no-repeat;
+  background-size: cover;
+  padding-bottom: 30px; }
+  section#programa h1, section#programa h2, section#programa h3, section#programa h4, section#programa p {
+    color: white; }
+  section#programa header {
+    text-align: center;
+    padding-bottom: 60px; }
+    section#programa header img {
+      margin: 80px 0 20px; }
+    section#programa header h1 {
+      font-size: 40px;
+      margin: 0 0 20px; }
+    section#programa header h2 {
+      font-size: 20px;
+      margin: 0 auto 20px;
+      width: 60%;
+      text-align: center;
+      line-height: 28px; }
+  section#programa .block {
+    text-align: center;
+    background: url(../img/bg-charla.png) repeat;
+    min-height: 500px;
+    position: relative;
+    margin: 0 10px;
+    border-radius: 30px; }
+    section#programa .block h3 {
+      font-size: 20px;
+      margin: 50px 0 10px;
+      font-weight: 200;
+      line-height: 24px; }
+      section#programa .block h3 span {
+        display: block;
+        font-size: 14px;
+        padding: 0 20px; }
+    section#programa .block h4 {
+      font-size: 18px;
+      margin: 0;
+      padding: 20px 0 0 0;
+      font-weight: 200;
+      background: url(../img/bg-charla.png) repeat;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      height: 40px;
+      border-radius: 0 0 30px 30px; }
+    section#programa .block p {
+      line-height: 22px;
+      padding: 10px 20px;
+      text-align: left; }
+    section#programa .block .thetime {
+      font-size: 13px;
+      font-weight: bold;
+      color: black;
+      background: #FFFFFF;
+      border: 7px solid #D0021B;
+      border-radius: 50px;
+      display: block;
+      position: absolute;
+      top: -35px;
+      left: 50%;
+      margin-left: -30px;
+      padding: 20px 10px; }
+    section#programa .block small {
+      font-size: 12px;
+      color: white;
+      font-weight: 200;
+      padding-bottom: 20px;
+      display: inline-block; }
+
+/* REGISTRACION */
+section#registracion {
+  z-index: 10;
+  position: relative;
+  background: url(../img/bg-registracion.jpg) 50% 0 no-repeat;
+  background-size: cover;
+  padding-bottom: 30px;
+  height: 100vh; }
+  section#registracion .eventioz {
+    background: url(../img/badge.png) no-repeat 0 0;
+    width: 390px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -195px; }
+    section#registracion .eventioz h1 {
+      font-size: 40px;
+      color: black;
+      position: absolute;
+      top: 260px;
+      left: 90px; }
+    section#registracion .eventioz h2 {
+      font-size: 30px;
+      position: absolute;
+      top: 360px;
+      left: 65px;
+      width: 250px;
+      font-weight: 700;
+      color: red;
+      -webkit-transform: rotate(-25deg);
+      -moz-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      -o-transform: rotate(-25deg);
+      filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); }
+    section#registracion .eventioz a {
+      position: absolute;
+      top: 420px;
+      left: 115px; }
+
+/* FOOTER */
+footer {
+  z-index: 10px;
+  position: relative;
+  padding: 60px 0; }
+  footer h1 {
+    font-size: 40px;
+    margin: 0 0 20px;
+    text-align: center;
+    color: black; }
+  footer .col4 {
+    text-align: center;
+    margin-top: 40px; }
+
+/* MEDIAQUERIES */
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .wrapper {
+    width: 98%; }
+
+  nav {
+    display: none; }
+
+  section#cover {
+    background: url(../img/bg-cover.jpg) no-repeat 50% 0;
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px; }
+    section#cover img#logo {
+      position: relative;
+      width: 70px;
+      margin-top: 20px;
+      left: 50%;
+      margin-left: -35px; }
+    section#cover h1 {
+      font-size: 30px;
+      margin: 30px 0 20px;
+      font-weight: 200; }
+    section#cover h2 {
+      font-size: 25px;
+      margin: 0 20px 20px;
+      font-weight: 200; }
+    section#cover h3 {
+      font-size: 20px;
+      margin: 0 0 20px;
+      font-weight: 200; }
+    section#cover h4 {
+      font-size: 14px;
+      margin: 0 15% 20px;
+      line-height: 26px;
+      font-weight: 300; }
+    section#cover p.host {
+      text-align: center;
+      font-size: 14px;
+      color: white;
+      position: relative;
+      margin: 40px 0 20px;
+      font-weight: 300; }
+      section#cover p.host a {
+        color: white;
+        text-decoration: none; }
+    section#cover p.social, section#cover p.hashtag {
+      text-align: center;
+      color: white;
+      margin: 15px 0; }
+      section#cover p.social a, section#cover p.hashtag a {
+        margin: 0 10px;
+        color: white;
+        text-decoration: none; }
+
+  section#ubicacion {
+    height: auto;
+    background: url(../img/bg-location.jpg) no-repeat 50% 0px;
+    position: relative;
+    width: 100%;
+    padding-bottom: 20px; }
+    section#ubicacion header {
+      background: white;
+      text-align: center;
+      padding-bottom: 20px; }
+      section#ubicacion header img {
+        margin: 30px 0 20px;
+        width: 50px; }
+      section#ubicacion header h1, section#ubicacion header h2 {
+        color: black;
+        font-weight: 200; }
+      section#ubicacion header h1 {
+        font-size: 25px;
+        margin: 0 0 20px; }
+      section#ubicacion header h2 {
+        font-size: 18px;
+        margin: 0 auto 20px;
+        width: 80%;
+        text-align: center;
+        line-height: 28px; }
+        section#ubicacion header h2 strong {
+          font-weight: 800; }
+    section#ubicacion .bondi {
+      position: relative;
+      background: url(../img/bg-beacon.png) 0 0 repeat;
+      padding: 10px;
+      border-radius: 5px;
+      line-height: 16px;
+      width: 230px;
+      margin: 20px auto 0;
+      left: 0;
+      bottom: auto; }
+      section#ubicacion .bondi img {
+        margin: 0 10px 0 0;
+        vertical-align: middle;
+        float: left; }
+      section#ubicacion .bondi span {
+        font-size: 12px;
+        font-weight: bold;
+        display: block;
+        padding-top: 10px; }
+    section#ubicacion .subted {
+      position: relative;
+      bottom: auto;
+      left: 0;
+      background: url(../img/bg-beacon.png) 0 0 repeat;
+      padding: 10px;
+      border-radius: 5px;
+      line-height: 16px;
+      width: 230px;
+      margin: 20px auto 0; }
+      section#ubicacion .subted img {
+        margin: 0 10px 0 0;
+        vertical-align: middle;
+        float: left; }
+      section#ubicacion .subted span {
+        font-size: 12px;
+        font-weight: bold;
+        display: block;
+        padding-top: 10px; }
+    section#ubicacion .subteb {
+      position: relative;
+      bottom: auto;
+      left: 0;
+      background: url(../img/bg-beacon.png) 0 0 repeat;
+      padding: 10px;
+      border-radius: 5px;
+      line-height: 16px;
+      width: 230px;
+      margin: 20px auto 0; }
+      section#ubicacion .subteb img {
+        margin: 0 10px 0 0;
+        vertical-align: middle;
+        float: left; }
+      section#ubicacion .subteb span {
+        font-size: 12px;
+        font-weight: bold;
+        display: block;
+        padding-top: 10px; }
+    section#ubicacion .comollego {
+      position: relative;
+      bottom: auto;
+      right: 0;
+      background: url(../img/bg-beacon.png) 0 0 repeat;
+      padding: 10px;
+      border-radius: 5px;
+      line-height: 16px;
+      width: 230px;
+      margin: 20px auto 50px;
+      text-align: center; }
+      section#ubicacion .comollego img {
+        margin: 0 10px 0 0;
+        vertical-align: middle;
+        float: none; }
+
+  section#oradores {
+    z-index: 10;
+    position: relative;
+    padding-bottom: 30px;
+    height: auto;
+    padding-bottom: 20px; }
+    section#oradores h1, section#oradores h2, section#oradores h3, section#oradores h4 {
+      color: black;
+      font-weight: 200; }
+    section#oradores header {
+      background: white;
+      text-align: center;
+      padding-bottom: 20px; }
+      section#oradores header img {
+        margin: 30px 0 20px;
+        width: 50px; }
+      section#oradores header h1 {
+        font-size: 25px;
+        margin: 0 0 20px; }
+      section#oradores header h2 {
+        font-size: 18px;
+        margin: 0 auto 20px;
+        width: 80%;
+        text-align: center;
+        line-height: 28px; }
+    section#oradores .block {
+      text-align: center;
+      min-height: 400px;
+      margin: 0 10px 30px; }
+      section#oradores .block h3 {
+        font-size: 20px;
+        margin: 20px 0 10px;
+        font-weight: 200; }
+      section#oradores .block h4 {
+        font-size: 14px;
+        margin: 0 0 10px;
+        font-weight: 200; }
+        section#oradores .block h4 a {
+          color: black;
+          text-decoration: none; }
+      section#oradores .block p {
+        line-height: 22px;
+        padding: 10px 20px; }
+
+  section#programa {
+    z-index: 10;
+    position: relative;
+    background: #313131 url(../img/bg-blackboard.jpg) 50% 0 no-repeat fixed;
+    padding-bottom: 20px; }
+    section#programa h1, section#programa h2, section#programa h3, section#programa h4, section#programa p {
+      color: white;
+      font-weight: 200; }
+    section#programa header {
+      text-align: center;
+      padding-bottom: 60px; }
+      section#programa header img {
+        margin: 30px 0 20px;
+        width: 50px; }
+      section#programa header h1 {
+        font-size: 25px;
+        margin: 0 0 20px; }
+      section#programa header h2 {
+        font-size: 18px;
+        margin: 0 auto 20px;
+        width: 80%;
+        text-align: center;
+        line-height: 28px; }
+    section#programa .block {
+      text-align: center;
+      background: url(../img/bg-charla.png) repeat;
+      min-height: 500px;
+      position: relative;
+      margin: 0 10px 70px;
+      border-radius: 30px; }
+      section#programa .block h3 {
+        font-size: 20px;
+        margin: 50px 0 10px;
+        font-weight: 200;
+        line-height: 24px; }
+        section#programa .block h3 span {
+          display: block;
+          font-size: 14px;
+          padding: 0 20px; }
+      section#programa .block h4 {
+        font-size: 18px;
+        margin: 0;
+        padding: 20px 0 0 0;
+        font-weight: 200;
+        background: url(../img/bg-charla.png) repeat;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        height: 40px;
+        border-radius: 0 0 30px 30px; }
+      section#programa .block p {
+        line-height: 22px;
+        padding: 10px 20px;
+        text-align: left; }
+      section#programa .block .thetime {
+        font-size: 13px;
+        font-weight: bold;
+        color: black;
+        background: #FFFFFF;
+        border: 7px solid #D0021B;
+        border-radius: 50px;
+        display: block;
+        position: absolute;
+        top: -35px;
+        left: 50%;
+        margin-left: -30px;
+        padding: 20px 10px; }
+      section#programa .block small {
+        font-size: 12px;
+        color: white;
+        font-weight: 200;
+        padding-bottom: 20px;
+        display: inline-block; }
+
+  section#registracion {
+    z-index: 10;
+    position: relative;
+    background: url(../img/bg-registracion.jpg) 50% 0 no-repeat;
+    padding-bottom: 30px;
+    height: 550px;
+    width: 100%; }
+    section#registracion .eventioz {
+      background: url(../img/badge.png) no-repeat 0 0;
+      background-size: 300px;
+      width: 320px;
+      height: 500px;
+      position: absolute;
+      top: 0;
+      left: 10px;
+      margin-left: 0; }
+      section#registracion .eventioz h1 {
+        font-size: 30px;
+        color: black;
+        position: absolute;
+        top: 190px;
+        left: 70px;
+        font-weight: 200; }
+      section#registracion .eventioz h2 {
+        font-size: 22px;
+        color: black;
+        position: absolute;
+        top: 240px;
+        left: 30px;
+        width: 250px;
+        font-weight: 200; }
+      section#registracion .eventioz a {
+        position: absolute;
+        top: 320px;
+        left: 50px; }
+
+  footer {
+    z-index: 10px;
+    position: relative;
+    padding: 60px 0; }
+    footer h1 {
+      font-size: 40px;
+      margin: 0 0 20px;
+      text-align: center;
+      color: black;
+      font-weight: 200; }
+    footer .col4 {
+      text-align: center;
+      margin-top: 40px;
+      width: 100%; } }
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  /* Styles */ }
+/* iPads (portrait and landscape) ----------- */
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */ }
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .wrapper {
+    width: 98%; }
+
+  nav {
+    display: none; }
+
+  section#cover {
+    background: url(../img/bg-cover.jpg) no-repeat 50% 0;
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px; }
+    section#cover img#logo {
+      position: relative;
+      width: 70px;
+      margin-top: 20px;
+      left: 50%;
+      margin-left: -35px; }
+    section#cover h1 {
+      font-size: 30px;
+      margin: 30px 0 20px;
+      font-weight: 200; }
+    section#cover h2 {
+      font-size: 25px;
+      margin: 0 20px 20px;
+      font-weight: 200; }
+    section#cover h3 {
+      font-size: 20px;
+      margin: 0 0 20px;
+      font-weight: 200; }
+    section#cover h4 {
+      font-size: 14px;
+      margin: 0 15% 20px;
+      line-height: 26px;
+      font-weight: 300; }
+    section#cover p.host {
+      text-align: center;
+      font-size: 14px;
+      color: white;
+      position: relative;
+      margin: 40px 0 20px;
+      font-weight: 300; }
+      section#cover p.host a {
+        color: white;
+        text-decoration: none; }
+    section#cover p.social, section#cover p.hashtag {
+      text-align: center;
+      color: white;
+      margin: 15px 0; }
+      section#cover p.social a, section#cover p.hashtag a {
+        margin: 0 10px;
+        color: white;
+        text-decoration: none; }
+
+  section#ubicacion {
+    height: auto;
+    background: url(../img/bg-location.jpg) no-repeat 50% -100px;
+    position: relative;
+    width: 100%;
+    padding-bottom: 20px; }
+    section#ubicacion header {
+      background: white;
+      text-align: center;
+      padding-bottom: 20px; }
+      section#ubicacion header img {
+        margin: 30px 0 20px;
+        width: 50px; }
+      section#ubicacion header h1, section#ubicacion header h2 {
+        color: black;
+        font-weight: 200; }
+      section#ubicacion header h1 {
+        font-size: 25px;
+        margin: 0 0 20px; }
+      section#ubicacion header h2 {
+        font-size: 18px;
+        margin: 0 auto 20px;
+        width: 80%;
+        text-align: center;
+        line-height: 28px; }
+        section#ubicacion header h2 strong {
+          font-weight: 800; }
+    section#ubicacion .bondi {
+      position: relative;
+      background: url(../img/bg-beacon.png) 0 0 repeat;
+      padding: 10px;
+      border-radius: 5px;
+      line-height: 16px;
+      width: 230px;
+      margin: 40px auto 0;
+      left: 0;
+      bottom: auto; }
+      section#ubicacion .bondi img {
+        margin: 0 10px 0 0;
+        vertical-align: middle;
+        float: left; }
+      section#ubicacion .bondi span {
+        font-size: 12px;
+        font-weight: bold;
+        display: block;
+        padding-top: 10px; }
+    section#ubicacion .subted {
+      position: relative;
+      bottom: auto;
+      left: 0;
+      background: url(../img/bg-beacon.png) 0 0 repeat;
+      padding: 10px;
+      border-radius: 5px;
+      line-height: 16px;
+      width: 230px;
+      margin: 20px auto 0; }
+      section#ubicacion .subted img {
+        margin: 0 10px 0 0;
+        vertical-align: middle;
+        float: left; }
+      section#ubicacion .subted span {
+        font-size: 12px;
+        font-weight: bold;
+        display: block;
+        padding-top: 10px; }
+    section#ubicacion .subteb {
+      position: relative;
+      bottom: auto;
+      left: 0;
+      background: url(../img/bg-beacon.png) 0 0 repeat;
+      padding: 10px;
+      border-radius: 5px;
+      line-height: 16px;
+      width: 230px;
+      margin: 20px auto 0; }
+      section#ubicacion .subteb img {
+        margin: 0 10px 0 0;
+        vertical-align: middle;
+        float: left; }
+      section#ubicacion .subteb span {
+        font-size: 12px;
+        font-weight: bold;
+        display: block;
+        padding-top: 10px; }
+    section#ubicacion .comollego {
+      position: relative;
+      bottom: auto;
+      right: 0;
+      background: url(../img/bg-beacon.png) 0 0 repeat;
+      padding: 10px;
+      border-radius: 5px;
+      line-height: 16px;
+      width: 230px;
+      margin: 20px auto 50px;
+      text-align: center; }
+      section#ubicacion .comollego img {
+        margin: 0 10px 0 0;
+        vertical-align: middle;
+        float: none; }
+
+  section#oradores {
+    z-index: 10;
+    position: relative;
+    padding-bottom: 30px;
+    height: auto;
+    padding-bottom: 20px; }
+    section#oradores h1, section#oradores h2, section#oradores h3, section#oradores h4 {
+      color: black;
+      font-weight: 200; }
+    section#oradores header {
+      background: white;
+      text-align: center;
+      padding-bottom: 20px; }
+      section#oradores header img {
+        margin: 30px 0 20px;
+        width: 50px; }
+      section#oradores header h1 {
+        font-size: 25px;
+        margin: 0 0 20px; }
+      section#oradores header h2 {
+        font-size: 18px;
+        margin: 0 auto 20px;
+        width: 80%;
+        text-align: center;
+        line-height: 28px; }
+    section#oradores .block {
+      text-align: center;
+      min-height: 750px;
+      margin: 0 10px 30px;
+      width: 350px !important; }
+      section#oradores .block h3 {
+        font-size: 20px;
+        margin: 20px 0 10px;
+        font-weight: 200; }
+      section#oradores .block h4 {
+        font-size: 14px;
+        margin: 0 0 10px;
+        font-weight: 200; }
+        section#oradores .block h4 a {
+          color: black;
+          text-decoration: none; }
+      section#oradores .block p {
+        line-height: 22px;
+        padding: 10px 20px; }
+
+  section#programa {
+    z-index: 10;
+    position: relative;
+    background: #313131 url(../img/bg-blackboard.jpg) 50% 0 no-repeat fixed;
+    padding-bottom: 20px; }
+    section#programa h1, section#programa h2, section#programa h3, section#programa h4, section#programa p {
+      color: white;
+      font-weight: 200; }
+    section#programa header {
+      text-align: center;
+      padding-bottom: 60px; }
+      section#programa header img {
+        margin: 30px 0 20px;
+        width: 50px; }
+      section#programa header h1 {
+        font-size: 25px;
+        margin: 0 0 20px; }
+      section#programa header h2 {
+        font-size: 18px;
+        margin: 0 auto 20px;
+        width: 80%;
+        text-align: center;
+        line-height: 28px; }
+    section#programa .block {
+      text-align: center;
+      background: url(../img/bg-charla.png) repeat;
+      min-height: 500px;
+      position: relative;
+      margin: 0 10px 70px;
+      border-radius: 30px;
+      width: 350px !important; }
+      section#programa .block h3 {
+        font-size: 20px;
+        margin: 50px 30px 10px;
+        font-weight: 200;
+        line-height: 24px; }
+        section#programa .block h3 span {
+          display: block;
+          font-size: 14px;
+          padding: 0 20px; }
+      section#programa .block h4 {
+        font-size: 18px;
+        margin: 0;
+        padding: 20px 0 0 0;
+        font-weight: 200;
+        background: url(../img/bg-charla.png) repeat;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        height: 40px;
+        border-radius: 0 0 30px 30px; }
+      section#programa .block p {
+        line-height: 22px;
+        padding: 10px 20px;
+        text-align: left; }
+      section#programa .block .thetime {
+        font-size: 13px;
+        font-weight: bold;
+        color: black;
+        background: #FFFFFF;
+        border: 7px solid #D0021B;
+        border-radius: 50px;
+        display: block;
+        position: absolute;
+        top: -35px;
+        left: 50%;
+        margin-left: -30px;
+        padding: 20px 10px; }
+      section#programa .block small {
+        font-size: 12px;
+        color: white;
+        font-weight: 200;
+        padding-bottom: 20px;
+        display: inline-block; }
+
+  section#registracion {
+    position: relative;
+    background: url(../img/bg-registracion.jpg) 50% 0 no-repeat;
+    padding-bottom: 30px;
+    height: 700px;
+    width: 100%; }
+    section#registracion .eventioz h1 {
+      font-weight: 200; }
+    section#registracion .eventioz h2 {
+      font-weight: 200; }
+    section#registracion .eventioz a {
+      left: 90px; }
+
+  footer {
+    z-index: 10px;
+    position: relative;
+    padding: 60px 0; }
+    footer h1 {
+      font-size: 40px;
+      margin: 0 0 20px;
+      text-align: center;
+      color: black;
+      font-weight: 200; }
+    footer .col4 {
+      text-align: center;
+      margin-top: 40px;
+      width: 100%; } }
+/* Desktops and laptops ----------- */
+@media only screen and (max-width: 1280px) and (min-width: 1200px) {
+  .wrapper {
+    width: 1200px; }
+    .wrapper .col3 {
+      width: 275px; }
+      .wrapper .col3 p {
+        font-size: 14px; }
+      .wrapper .col3 h3 {
+        padding: 0 30px; } }
+@media only screen and (max-width: 1200px) and (min-width: 1000px) {
+  .wrapper {
+    width: 960px; }
+    .wrapper .col3 {
+      width: 460px; }
+      .wrapper .col3 p {
+        font-size: 14px; }
+      .wrapper .col3 h3 {
+        padding: 0 30px; }
+    .wrapper .col4 {
+      width: 320px; }
+
+  #oradores .wrapper .col3 {
+    min-height: 580px !important; }
+
+  #programa .wrapper .col3 {
+    min-height: 450px;
+    margin-bottom: 100px; } }
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */ }
+/* iPhone 4 ----------- */

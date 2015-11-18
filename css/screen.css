@@ -324,7 +324,7 @@ section#ubicacion {
 section#oradores {
   z-index: 10;
   position: relative;
-  padding-bottom: 30px; }
+  padding-bottom: 60px; }
   section#oradores h1, section#oradores h2, section#oradores h3, section#oradores h4 {
     color: black; }
   section#oradores header {
@@ -367,7 +367,7 @@ section#programa {
   position: relative;
   background: url(../img/bg-blackboard.jpg) 50% 0 no-repeat;
   background-size: cover;
-  padding-bottom: 30px; }
+  padding-bottom: 60px; }
   section#programa h1, section#programa h2, section#programa h3, section#programa h4, section#programa p {
     color: white; }
   section#programa header {
@@ -387,7 +387,7 @@ section#programa {
   section#programa .block {
     text-align: center;
     background: url(../img/bg-charla.png) repeat;
-    min-height: 500px;
+    min-height: 650px;
     position: relative;
     margin: 0 10px;
     border-radius: 30px; }
@@ -459,22 +459,29 @@ section#registracion {
       top: 260px;
       left: 90px; }
     section#registracion .eventioz h2 {
-      font-size: 30px;
+      font-size: 24px;
       position: absolute;
-      top: 360px;
+      
       left: 65px;
       width: 250px;
-      font-weight: 700;
+      
+      
       color: red;
-      -webkit-transform: rotate(-25deg);
-      -moz-transform: rotate(-25deg);
-      -ms-transform: rotate(-25deg);
-      -o-transform: rotate(-25deg);
-      filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); }
+      font-weight: 700;
+      top: 350px;
+    }
+    section#registracion .eventioz h3 {
+      font-size: 22px;
+      position: absolute;
+      top: 310px;
+      left: 50px;
+      width: 280px;
+      color: black;
+      font-weight: 100; } 
     section#registracion .eventioz a {
       position: absolute;
-      top: 420px;
-      left: 115px; }
+      top: 390px;
+      left: 75px; }
 
 /* FOOTER */
 footer {
@@ -796,6 +803,14 @@ footer {
         left: 30px;
         width: 250px;
         font-weight: 200; }
+      section#registracion .eventioz h3 {
+        font-size: 24px;
+        position: absolute;
+        top: 340px;
+        left: 50px;
+        width: 280px;
+        color: black;
+        font-weight: 100; } 
       section#registracion .eventioz a {
         position: absolute;
         top: 320px;
@@ -1107,7 +1122,7 @@ footer {
     section#registracion .eventioz h1 {
       font-weight: 200; }
     section#registracion .eventioz h2 {
-      font-weight: 200; }
+      font-weight: 400; }
     section#registracion .eventioz a {
       left: 90px; }
 
@@ -1152,8 +1167,28 @@ footer {
 
   #programa .wrapper .col3 {
     min-height: 450px;
-    margin-bottom: 100px; } }
-/* Large screens ----------- */
-@media only screen and (min-width: 1824px) {
-  /* Styles */ }
-/* iPhone 4 ----------- */
+    margin-bottom: 100px; }
+}
+
+@media only screen and (max-width: 999px){
+  .wrapper { width: 100%; }
+  .wrapper .col3 { width: 45%; margin: 20px auto!important; float: left!important; padding: 40px 20px; }
+  section#ubicacion .transport { position: relative; width: 760px; left: 50%; margin-left: -380px; top: 380px; }
+  section#ubicacion .transport div { position: relative!important; float: left!important; left: auto; bottom: auto; margin: 0 10px; }
+  section#ubicacion .transport div.comollego { position: absolute!important; top: 90px; right: 20px; background: url(../img/bg-beacon.png) 0 0 repeat; padding: 10px; border-radius: 5px; line-height: 16px; width: 120px; left: 50%; margin-left: -60px; }
+  section#oradores .wrapper .block { background: url(../img/bg-charla.png) repeat; margin: 30px 20px!important; width: 300px; float: none!important; left: 50%; position: relative; margin-left: -150px!important; }
+  section#programa .wrapper .block { min-height: 450px!important; margin: 30px 20px 110px!important; width: 300px; float: none!important; left: 50%; position: relative; margin-left: -150px!important; }
+  section#programa .wrapper .block h4 { left: 0; }
+  section#programa .wrapper .mb { min-height: 330px!important; }
+  section#programa .wrapper .af { min-height: 480px!important; }
+  section#programa .wrapper .jc { min-height: 490px!important; }
+  section#programa .wrapper .ac { min-height: 390px!important; }
+  footer .col4 { width: 33%; }
+  footer .up img { width: 20%; }
+  footer .scv img { width: 50%; }
+  footer .hashboxed img { width: 50%; }
+}
+
+@media only screen and (max-width: 780px) {
+  nav { display: none!important; }
+}

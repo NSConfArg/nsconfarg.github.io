@@ -1,170 +1,474 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>NSConf Argentina 2015 | Charlas Técnicas en español para developers de iOS y Mac</title>
-    <meta name="description" content="charlas técnicas en español para developers de iOS y Mac">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-    <link type="text/plain" rel="author" href="humans.txt" />    
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <link rel='stylesheet' href='css/animate.css'>
-<link rel='stylesheet' href='css/screen.css'>
-    <script src='js/vendor/modernizr-latest.js'></script>
+	<title>NSConf Argentina</title>
+
+	<meta name="description" content="NSConf Argentina 2016 - Sábado 16 de Abril, de 9 a 13hs, en la Universidad de Palermo">
+
+	<!-- Facebook Stuff -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="NSConf Argentina"/>
+  <meta property="og:title" content="NSConf Argentina 2016"/>
+  <meta property="og:description" content="Sábado 16 de Marzo, de 9 a 13hs, en la Universidad de Palermo"/>
+  <meta property="og:image" content="/assets/images/banner-fb.43b9d72b.png"/>
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:url" content="http://nsconfarg.com"/>
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+
+	<link rel="stylesheet" href="assets/styles/main.59c5bdf0.css">
+
+	<link href='https://fonts.googleapis.com/css?family=Titillium+Web:200,600' rel='stylesheet' type='text/css'>
+
+	<script src="assets/scripts/vendor/modernizr.8949bf9b.js"></script>
+
+	<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Dosis:300,400,600">
+
+	<link rel="icon" type="image/png" href="/assets/images/favicon_32.1b98171d.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/assets/images/favicon.2dc68dc5.png" sizes="16x16" />
+
 </head>
-<body>
-    <!--[if lt IE 7]>
-        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-    <![endif]-->
-<nav id="main">
-  <ul class="cf">
-    <li><a href="#cover">NSConf Arg</a></li>
-    <li><a href="#ubicacion">Ubicación</a></li>
-    <li><a href="#oradores">Oradores</a></li>
+<body class="clear proximamente">
+
+	
+<header id="header">
+  <h1 id="logo"><a href="">NSConf Argentina 2016</a></h1>
+</header>
+
+<div id="abstract" data-0="left: 50%; bottom: 0%;" 
+ data-200p="left: 30%; bottom: -5%;"
+ ></div>
+
+<!-- data-120p="transform: scale(.75); left: 40%; bottom: -5%; opacity: .5"
+ data-200p="transform: scale(.8); left: 108%; bottom: 15%; opacity: .75"
+ data-420p="transform: scale(.8); left: 108%; bottom: 15%; opacity: .75"
+ data-460p="transform: scale(.8); left: 100%; bottom: 80%; opacity: .75" -->
+
+<nav id="navigation">
+  <ul id="nav">
+    <li class="current"><a href="#inicio">Inicio</a></li>
+    <li><a href="#info">Info</a></li>
     <li><a href="#programa">Programa</a></li>
-    <li><a href="#registracion">Registración</a></li>
+    <li><a href="#sponsors">Sponsors</a></li>
+    <li><a href="#archivo">Archivo</a></li>
   </ul>
 </nav>
-<section id="cover">
-  <img src="img/nsconfarg.png" alt="NSConfarg" id="logo" class="wow fadeInDown">
-  <h1>NSConf Argentina</h1>
-  <h2>Sábado 16 de Abril 2016 de 9 a 13hs</h2>
-  <h3>Buenos Aires, Argentina</h3>
-  <h4>NSConf Argentina, una conferencia con charlas técnicas en español para developers de iOS y Mac.</h4>
-  <p class="host">Organiza: <a href="http://twitter.com/marianoabdala">Mariano Abdala</a></p>
-  <p class="social"><a href="http://twitter.com/nsconfarg/"><img src="img/icon-twitter.png" alt="follow us"></a></p>
-  <p class="hashtag"><a href="http://twitter.com/search?q=%23nsconfarg" target="_blank">#nsconfarg</a></p>
-</section>
-<section id="ubicacion">
-  <header>
-    <img src="img/icon-location.png" alt="Ubicación">
-    <h1>Ubicación</h1>
-    <h2>En esta edición, la Universidad de Palermo nos ha cedido uno de sus mejores salones, ubicado en la sede de <strong>Mario Bravo 1050</strong> en el barrio de Palermo.</h2>
-  </header>
-  <div class="transport cf">
-    <div class="bondi"><img src="img/icon-bondi.png" alt="Colectivos" /><span>Lineas de Colectivo</span>92 - 106 - 109 - 128</div>
-    <div class="subteb"><img src="img/icon-subte.png" alt="Subte B" /><span>Subte Linea B</span>Estacion Medrano</div>
-    <div class="subted"><img src="img/icon-subte-d.png" alt="Subte D" /><span>Subte Linea D</span>Estacion Bulnes</div>
-    <div class="comollego"><a href="http://mapa.buenosaires.gob.ar/comollego/?lat=-34.597321&lng=-58.415841&zl=15&modo=transporte&hasta=Bravo%2C+Mario+1050%2C+" target="_blank"><img src="img/comollego.png" alt="Mas info en ComoLlego"></a></div>
-  </div>
-</section>
-<section id="oradores">
-  <header>
-    <img src="img/icon-mic.png" alt="Oradores">
-    <h1>Oradores</h1>
-    <h2>Tenemos un equipo de oradores de primera, con años de experiencia a la vanguardia en el desarrollo de aplicaciones para iOS y Mac.</h2>
-  </header>
-  <div class="wrapper cf">
-    <div class="col3 block wow fadeInLeft">
-      <img src="img/nicolas-purita.png" alt="Nicolás Purita" >
-      <h3>Nicolás Purita</h3>
-      <h4><a href="http://twitter.com/nicopuri" target="_blank">@nicopuri</a></h4>
-      <p>Ingeniero en Informática del ITBA.</p>
-      <p>Developer en Xapo (iOS y backend) y entusiasta del Bitcoin, esa cosa digital de la que todos hablan. Ex developer en Etermax, Zauber y Lemon.</p>
-      <p>Fanático del Futbol, Kitesurf y Ski.</p>
-    </div>
-    <div class="col3 block wow fadeInLeft">
-      <img src="img/diego-sebastian-mera.png" alt="Diego Sebastián Mera">
-      <h3>Diego Sebastián Mera</h3>
-      <h4><a href="http://twitter.com/meramon" target="_blank">@meramon</a></h4>
-      <p>Desarrollador de Software hace 15 años de lo que sea (salvo en Windows), otaku y trekkie recalcitrante.</p>
-      <p>Experiencia en cosas horribles como PHP, Perl o el burocratico Java. Desarrollo felizmente en iOS desde el 2009. También trabajo en Android, pero bueno, todos tenemos algún pecado que ocultar.</p>
-      <p>Actualmente trabajo en Avi-On, una plataforma BLE de iluminación hogareña.</p>
-    </div>
-    <div class="col3 block wow fadeInRight">
-      <img src="img/pablo-bendersky.png" alt="Pablo Bendersky" >
-      <h3>Pablo Bendersky</h3>
-      <h4><a href="http://twitter.com/pbendersky" target="_blank">@pbendersky</a></h4>
-      <p>Lic. en Ciencias de la Computación de la UBA.</p>
-      <p>Desarrollo profesionalmente desde hace 16 años, y para iOS desde hace 7. Hace 11 años formé Quadion, donde hacemos desarrollos a medida de todo tipo.</p>
-    </div>
-    <div class="col3 block wow fadeInRight">
-      <img src="img/rodrigo-nicolas-mato.png" alt="Rodrigo Nicolás Mato" >
-      <h3>Rodrigo Nicolás Mato</h3>
-      <h4><a href="http://twitter.com/rmatox">@rmatox</a></h4>
-      <p>Ingeniero en Informática de la UBA.</p>
-      <p>iOS Developer desde los inicios.  Inicialmente desarrollando juegos para SGN en Obj-C y C++.   Luego de unos meses en una Software Factory, entré a Bumeran.com para desarrollar su app, y posteriormente en el equipo iOS de OLX.com.</p>
-      <p>Actualmente trabajando en el StartUp Tril como líder del desarrollo iOS, desarrollando una red social.</p>
-      <p>Amor a los deportes y actividad física, principalmente Windsurf, Longboard, y Snowboard.</p>
-    </div>
-  </div>
-</section>
-<section id="programa">
-  <header>
-    <img src="img/icon-mic-white.png" alt="programa">
-    <h1>Programa</h1>
-    <h2>Estas son las charlas, y el cronograma que preparamos para pasar una jornada divertida y de mucho conocimiento. Entre cada charla tendremos amenos breaks para charlar y conocernos mas.</h2>
-    <h2>Acreditacion 09:00 hs puntual</h2>
-  </header>
-  <div class="wrapper cf">
-    <div class="col3 block wow fadeInLeft mb">
-      <div class="thetime">09:30</div>
-      <h3>Empezando a Testear<br />con Xcode 7</h3>
-      <small>Duracion: 30minutos</small>
-      <p>Si nunca hiciste tests, Xcode 7 es una buena oportunidad para empezar. La idea es recorrer juntos las herramientas provistas (Code Coverage y UI Testing) para poder desarrollar aplicaciones más robustas y de una mejor calidad final.</p>
-      <h4>Pablo Bendersky</h4>
-    </div>
-    <div class="col3 block wow fadeInLeft af">
-      <div class="thetime">10:15</div>
-      <h3>NSOperations<br />a fondo</h3>
-      <small>Duracion: 30minutos</small>
-      <p>NSOperations es una herramienta super poderosa y util que nos puede ayudar a mejorar la performance de nuestra app. Vamos a levantar el capó y entender sus propiedades, los estados que posee, la prioridad y los mas importante como hacer que una NSOperation depende de la otra.</p>
-      <h4>Nicolás Purita</h4>
-    </div>
-    <div class="col3 block wow fadeInRight jc">
-      <div class="thetime">11:15</div>
-      <h3>tvOS: iOS desde la<br />comodidad del sillon</h3>
-      <small>Duracion: 30minutos</small>
-      <p>Apple TV (4th gen) es la nuevo chico del barrio en el ecosistema Apple y tiene mucho que decir. Analizaremos rápidamente aspectos básicos tvOS con el objetivo de romper algunos miedos y animarnos a expandir las posibilidades de nuestros productos.</p>
-      <h4>Diego Mera</h4>
-    </div>
-    <div class="col3 block wow fadeInRight ac">
-      <div class="thetime">12:00</div>
-      <h3>Animaciones y Física realistas<br />con UIKit Dynamics</h3>
-      <small>Duracion: 30minutos</small>
-      <p>Para el común desarrollador iOS las animaciones o interacciones dentro de nuestras aplicaciones son un agregado posiblemente complejo y  largo. Para contrarrestar esto UIKit Dynamics presenta una opción extremadamente fácil, y de rápida implementación, para agregar realismo a nuestras aplicaciones mediante sistema de física, animaciones, e interacciones.</p>
-      <h4>Rodrigo Mato</h4>
-    </div>
-  </div>
-</section>
-<section id="registracion">
-  <div class="eventioz wow fadeInDown">
-    <h1>Registración</h1>
-    <!-- <h2>Gratuita, pero limitada, reservá tu lugar ahora!</h2> -->
-    <h3><br>A partir del miércoles 16 de marzo, 16hs.<br><br>La inscripción es gratuita, pero los cupos son limitados.</h3>
-    <!-- <a href="https://eventioz.com.ar/e/nsconf-argentina-2015?from_button=yes&source=orevib&utm_campaign=or_nsconf-argentina-2015&utm_content=integrated_button&utm_medium=integration_tool&utm_source=eventioz" target="_blank"><img src="https://eventioz.com.ar/e/nsconf-argentina-2015/promotion_button.png?size=large&content=Inscribirme+ahora&from=0D9EFF&to=2386E9&font=FFFFFF" alt="Eventioz - nsconf-argentina-2015"></a> -->
-    <!-- <h2>¡CUPO COMPLETO!</h2> -->
-  </div>
-</section>
-<footer>
-  <h1>Sponsors</h1>
-  <div class="wrapper cf">
-    <div class="col4 up">
-      <a href="http://www.palermo.edu/" target="_blank"><img src="img/up.png"></a>
-    </div>
-    <div class="col4 scv">
-      <a href="http://www.scvsoft.com/" target="_blank"><img src="img/scv.png"></a>
-    </div>
-    <div class="col4 hashboxed">
-      <a href="http://www.hashboxed.com/" target="_blank"><img src="img/hashboxed.png"></a>
-    </div>
-  </div>
-</footer>
-        <script src='js/vendor/jquery-1.11.0.min.js'></script>
-<script src='js/plugins.js'></script>
-<script src='js/retina.js'></script>
-<script src='js/wow.js'></script>
-<script src='js/main.js'></script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            var _gaq=[['_setAccount','UA-48044602-1'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src='//www.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-    </body>
+<a href="http://twitter.com/NSConfArg" class="fa-twitter" id="btn-twitter" target="_blank">@NSConfArg <svg width="166px" height="135px" viewBox="0 0 166 135" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+  <g id="twitter" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <path d="M165.95556,16.6605732 C159.870731,19.2833442 153.261348,21.1717393 146.442144,21.9061152 C153.47117,17.7096816 158.821623,11.1002987 161.339483,3.23198578 C154.835011,7.11368683 147.491252,9.9462795 139.832761,11.4150312 C133.643021,4.80564837 124.830511,0.714125633 115.073803,0.714125633 C96.2947624,0.714125633 81.1876016,15.9261973 81.1876016,34.6003267 C81.1876016,37.2230977 81.5023341,39.8458687 82.0268883,42.3637289 C53.9107833,40.8949771 28.8370927,27.4663897 12.1562693,6.90386515 C9.21876576,11.9395854 7.54019233,17.7096816 7.54019233,24.004332 C7.54019233,35.754346 13.5201102,46.1405191 22.6473532,52.2253478 C17.0870787,52.0155261 11.8415367,50.4418635 7.33037065,47.9240033 L7.33037065,48.3436467 C7.33037065,64.8146485 18.9754738,78.4530576 34.502278,81.6003828 C31.6696854,82.3347586 28.627271,82.754402 25.5848567,82.754402 C23.3817291,82.754402 21.2835123,82.5445803 19.1852955,82.2298478 C23.4866399,95.6584352 35.9710298,105.415143 50.868369,105.729876 C39.2232658,114.857119 24.6406591,120.207572 8.7991224,120.207572 C5.96652974,120.207572 3.34375875,120.102661 0.616076931,119.787928 C15.618327,129.439726 33.4531696,135 52.6518532,135 C114.968892,135 149.064915,83.383867 149.064915,38.5869386 C149.064915,37.1181869 149.064915,35.6494351 148.960004,34.1806834 C155.569387,29.3547848 161.339483,23.3748669 165.95556,16.6605732 L165.95556,16.6605732 Z" id="bird" fill="#0076FE" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg></a>
+
+<nav class="mobile-nav">
+  <ul>
+    <li class="inner"><a href="#inicio">Inicio</a></li>
+    <li class="inner"><a href="#info">Info</a></li>
+    <li class="inner"><a href="#programa">Programa</a></li>
+    <li class="inner"><a href="#sponsors">Sponsors</a></li>
+    <li class="inner"><a href="#archivo">Archivo</a></li>
+    <li><a href="http://twitter.com/NSConfArg" target="_blank">@NSConfArg <svg width="166px" height="135px" viewBox="0 0 166 135" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+  <g id="twitter" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <path d="M165.95556,16.6605732 C159.870731,19.2833442 153.261348,21.1717393 146.442144,21.9061152 C153.47117,17.7096816 158.821623,11.1002987 161.339483,3.23198578 C154.835011,7.11368683 147.491252,9.9462795 139.832761,11.4150312 C133.643021,4.80564837 124.830511,0.714125633 115.073803,0.714125633 C96.2947624,0.714125633 81.1876016,15.9261973 81.1876016,34.6003267 C81.1876016,37.2230977 81.5023341,39.8458687 82.0268883,42.3637289 C53.9107833,40.8949771 28.8370927,27.4663897 12.1562693,6.90386515 C9.21876576,11.9395854 7.54019233,17.7096816 7.54019233,24.004332 C7.54019233,35.754346 13.5201102,46.1405191 22.6473532,52.2253478 C17.0870787,52.0155261 11.8415367,50.4418635 7.33037065,47.9240033 L7.33037065,48.3436467 C7.33037065,64.8146485 18.9754738,78.4530576 34.502278,81.6003828 C31.6696854,82.3347586 28.627271,82.754402 25.5848567,82.754402 C23.3817291,82.754402 21.2835123,82.5445803 19.1852955,82.2298478 C23.4866399,95.6584352 35.9710298,105.415143 50.868369,105.729876 C39.2232658,114.857119 24.6406591,120.207572 8.7991224,120.207572 C5.96652974,120.207572 3.34375875,120.102661 0.616076931,119.787928 C15.618327,129.439726 33.4531696,135 52.6518532,135 C114.968892,135 149.064915,83.383867 149.064915,38.5869386 C149.064915,37.1181869 149.064915,35.6494351 148.960004,34.1806834 C155.569387,29.3547848 161.339483,23.3748669 165.95556,16.6605732 L165.95556,16.6605732 Z" id="bird" fill="#0076FE" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg></a></li>
+  </ul>
+</nav>
+
+<a href="" class="toggle-nav"></a>
+
+<section id="inicio">
+  <div class="misc">
+    <!--  data-0p="top: 30%" data-100p="top: 0%" -->
+    <span class="big">Inicio</span>
+    <span class="small">Buenos Aires</span>
+    <span class="small">Sábado 16 de abril</span>
+  </div>
+  <div class="wrap">
+    <h2 data-0="opacity: 1" data-50p="opacity: 0">
+NSConf <br><span>Argentina 2016</span></h2>
+    <p class="mobile-only">Sábado 16 de abril<br>
+Mario Bravo 1050, CABA</p>
+    <div class="text">
+      <div class="register">
+        <h4>Registración</h4>
+        <p>Registrate a partir del miércoles 16 de marzo a las 16hs.</p>
+      </div>
+
+      <div class="full">
+        <h4>Cupos Llenos</h4>
+        <p>Los cupos para esta edición ya están llenos. Si no llegaste a inscribirte, te esperamos el año que viene.</p>
+      </div>
+
+      <div class="past">
+        <h4>Edición 2016</h4>
+        <p>Gracias a todos los que participaron de la conferencia este año. Nos vemos el que viene!</p>
+      </div>
+      <a href="" class="past">Ver Conferencia 2016</a>
+    </div>
+
+    <div class="buttons">
+      <a href="" class="register">Registrate</a>
+    </div>
+  </div>
+</section>
+
+<section id="info" class="clear">
+  <div class="misc">
+    <!-- data-bottom-top="top: 30%" data-top-bottom="top: 0%" -->
+    <span class="big">Info</span>
+    <span class="small mobile-only">9–13hs</span>
+    <span class="small">Universidad de Palermo</span>
+  </div>
+  <div class="wrap clear">
+    <article>
+      <div class="text">
+        <h4>Qué</h4>
+        <p>NSConf Argentina es una conferencia con charlas técnicas en español para developers de iOS y Mac.</p>
+      </div>
+    </article>
+    <article>
+      <div class="text">
+        <h4>Cuándo</h4>
+        <p>Sábado 16 de abril,<br>de 9–13hs. </p>
+      </div>
+    </article>
+    <article>
+      <div class="text">
+        <h4>Dónde</h4>
+        <p><a href="https://goo.gl/maps/Gnc9t6Gbaxq" target="_blank" class="invisibleLink">Mario Bravo 1050,<br>CABA</a></p>
+      </div>
+    </article>
+    <article>
+      <div class="text">
+        <h4>Organiza</h4>
+        <p>Mariano Abdala<br><a href="http://twitter.com/marianoabdala" target="_blank">@marianoabdala</a></p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="programa" class="clear">
+  <div class="misc">
+    <!-- data-bottom-top="top: 5%" data-top-bottom="top: -25%" -->
+    <span class="big">Programa</span>
+    <span class="small">Inscripción gratuita</span>
+    <span class="small mobile-only">Buenos Aires</span>
+    <span class="small">Sábado 16 de abril</span>
+  </div>
+  <div class="wrap clear">
+    <article class="break clear">
+      <span class="time">09:00</span>
+      <div class="text">
+        <h4>Acreditación <span>(puntual)</span></h4>
+      </div>
+    </article>
+
+    <article class="clear">
+      <span class="time">09:30</span>
+      <div class="author">
+        <a href="http://twitter.com/pbendersky" class="avatar" target="_blank"><img src="assets/images/pablo-bendersky.ef466fa2.jpg" alt=""></a>
+        <h4>Pablo Bendersky</h4>
+        <a href="http://twitter.com/pbendersky" target="_blank">@pbendersky</a>
+      </div>
+      <div class="text">
+        <h4>Empezando a testear con Xcode 7</h4>
+        <p>Si nunca hiciste tests, Xcode 7 es una buena oportunidad para empezar. La idea es recorrer juntos las herramientas provistas (Code Coverage y UI Testing) para poder desarrollar aplicaciones más robustas y de una mejor calidad final.</p>
+      </div>
+    </article>
+
+    <article class="break clear">
+      <span class="time">10:00</span>
+      <div class="text">
+        <h4>Break</h4>
+      </div>
+    </article>
+
+    <article class="clear">
+      <span class="time">10:15</span>
+      <div class="author">
+        <a href="http://twitter.com/nicopuri" target="_blank" class="avatar"><img src="assets/images/nicolas-purita.d73a8d9c.jpg" alt=""></a>
+        <h4>Nicolás Purita</h4>
+        <a href="http://twitter.com/nicopuri" target="_blank">@nicopuri</a>
+      </div>
+      <div class="text">
+        <h4>NSOperations a fondo</h4>
+        <p>NSOperations es una herramienta super poderosa y util que nos puede ayudar a mejorar la performance de nuestra app. Vamos a levantar el capó y entender sus propiedades, los estados que posee, la prioridad y los mas importante como hacer que una NSOperation depende de la otra.</p>
+      </div>
+    </article>
+
+    <article class="break clear">
+      <span class="time">10:45</span>
+      <div class="text">
+        <h4>Break</h4>
+      </div>
+    </article>
+
+    <article class="clear">
+      <span class="time">11:15</span>
+      <div class="author">
+        <a href="http://twitter.com/meramon" class="avatar" target="_blank"><img src="assets/images/diego-mera.aa139e28.jpg" alt=""></a>
+        <h4>Diego Mera</h4>
+        <a href="http://twitter.com/meramon" target="_blank">@meramon</a>
+      </div>
+      <div class="text">
+        <h4>TV-OS: iOS desde la comodidad del sillon</h4>
+        <p>Apple TV (4th gen) es la nuevo chico del barrio en el ecosistema Apple y tiene mucho que decir. Analizaremos rápidamente aspectos básicos tvOS con el objetivo de romper algunos miedos y animarnos a expandir las posibilidades de nuestros productos.</p>
+      </div>
+    </article>
+
+    <article class="break clear">
+      <span class="time">11:45</span>
+      <div class="text">
+        <h4>Break</h4>
+      </div>
+    </article>
+
+    <article class="clear">
+      <span class="time">12:00</span>
+      <div class="author">
+        <a href="http://twitter.com/rmatox" class="avatar" target="_blank"><img src="assets/images/rodrigo-mato.c1a4ebcd.jpg" alt=""></a>
+        <h4>Rodrigo Mato</h4>
+        <a href="http://twitter.com/rmatox" target="_blank">@rmatox</a>
+      </div>
+      <div class="text">
+        <h4>Animaciones y Física realistas con UIKit Dynamics</h4>
+        <p>Para el común desarrollador iOS las animaciones o interacciones dentro de nuestras aplicaciones son un agregado posiblemente complejo y largo. Para contrarrestar esto UIKit Dynamics presenta una opción extremadamente fácil, y de rápida implementación, para agregar realismo a nuestras aplicaciones mediante sistema de física, animaciones, e interacciones.</p>
+      </div>
+    </article>
+
+    <article class="break clear">
+      <span class="time">12:30</span>
+      <div class="text">
+        <h4>Cierre</h4>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="sponsors" class="clear">
+  <div class="misc">
+    <!-- data-bottom-top="top: 35%" data-top-bottom="top: -30%" -->
+    <span class="big">Sponsors</span>
+    <span class="small">9–13hs</span>
+    <span class="small">Universidad de Palermo</span>
+  </div>
+  <div class="wrap">
+    <ul class="clear">
+      <li><a href="http://www.palermo.edu/" target="_blank"><img src="assets/images/sponsor-up.3d68dbe5.jpg" alt=""></a></li>
+      <li><a href="http://scvsoft.com/" target="_blank"><img src="assets/images/sponsor-scv.a798f35d.jpg" alt=""></a></li>
+      <li><a href="http://aerolab.co/" target="_blank"><img src="assets/images/sponsor-aerolab.2a6cdf31.jpg" alt=""></a></li>
+      <li><a href="https://www.acamica.com/" target="_blank"><img src="assets/images/sponsor-acamica.3e29b4e8.jpg" alt=""></a></li>
+    </ul>
+  </div>
+</section>
+
+<section id="archivo" class="clear">
+  <div class="misc">
+    <!-- data-bottom-top="top: 15%" data-top-bottom="top: -10%" -->
+    <span class="big">Archivo</span>
+    <span class="small">Buenos Aires</span>
+    <span class="small mobile-only">Sábado 16 de abril</span>
+  </div>
+  <div class="wrap">
+    <ul class="pager clear">
+      <li class="active"><a href="" data-year="2015">2015</a></li>
+      <li><a href="" data-year="2014">2014</a></li>
+    </ul>
+    <div id="year-2015" class="year active">
+      <div class="links">
+        <a href="https://www.flickr.com/photos/123174867@N06/sets/72157651893981491" target="_blank">Fotos</a>
+      </div>
+      <article class="clear">
+        <div class="author">
+          <div class="personal">
+            <h4>Mariano Abdala</h4>
+            <a href="http://twitter.com/marianoabdala" target="_blank">@marianoabdala</a>
+          </div>
+          <ul>
+            <li><a href="https://vimeo.com/album/3345190/video/124846742" target="_blank">Video</a></li>
+          </ul>
+        </div>
+        <div class="text">
+          <h4>Intro NSConft Argentina 2015</h4>
+        </div>
+      </article>
+
+      <article class="clear">
+        <div class="author">
+          <div class="personal">
+            <h4>Martín Blech</h4>
+            <a href="http://twitter.com/martinblech" target="_blank">@martinblech</a>
+          </div>
+          <ul>
+            <li><a href="https://vimeo.com/album/3345190/video/124861377" target="_blank">Video</a></li>
+            <li><a href="https://github.com/NSConfArg/2015/raw/master/Presentaciones/Handoff.zip" target="_blank">Slides</a></li>
+            <li><a href="https://github.com/NSConfArg/NSConfArg2015Handoff" target="_blank">Repo</a></li>
+          </ul>
+        </div>
+        <div class="text">
+          <h4>Handoff: Continuidad de actividades entre iOS, OS X y la web</h4>
+          <p>Un recorrido sobre Handoff: qué es exactamente, cómo se usa y cómo lo podemos aprovechar en nuestras aplicaciones iOS, OS X, y sitios web.</p>
+        </div>
+      </article>
+
+      <article class="clear">
+        <div class="author">
+          <div class="personal">
+            <h4>Adrian Ferreyra</h4>
+            <a href="http://twitter.com/_adrianferreyra" target="_blank">@_adrianferreyra</a>
+          </div>
+          <ul>
+            <li><a href="https://vimeo.com/album/3345190/video/124759369" target="_blank">Video</a></li>
+            <li><a href="https://github.com/NSConfArg/2015/raw/master/Presentaciones/FP%20in%20swift.zip" target="_blank">Slides</a></li>
+            <li><a href="https://github.com/NSConfArg/FunctionalSwiftNSConfArg2015" target="_blank">Repo</a></li>
+          </ul>
+        </div>
+        <div class="text">
+          <h4>Programacion funcional en Swift</h4>
+          <p>Desde la presentación de Swift, el interés de la comunidad por la programación funcional ha crecido rápidamente. ¿Qué es FP? ¿Para qué sirve? ¿Cómo logramos un enfoque funcional en nuestro código? Nos introduciremos al mundo funcional desde lo básico hasta integrar conceptos funcionales como Functores y Monadas. Una buena oportunidad para acercarse a Swift desde una perspectiva diferente a la que estamos acostumbrados.</p>
+        </div>
+      </article>
+
+      <article class="clear">
+        <div class="author">
+          <div class="personal">
+            <h4>Julio Carretoni</h4>
+            <a href="http://twitter.com/dev_jac" target="_blank">@dev_jac</a>
+          </div>
+          <ul>
+            <li><a href="https://vimeo.com/album/3345190/video/124979624" target="_blank">Video</a></li>
+            <li><a href="https://github.com/NSConfArg/2015/raw/master/Presentaciones/Accesibilidad.zip" target="_blank">Slides</a></li>
+          </ul>
+        </div>
+        <div class="text">
+          <h4>Accesibilidad, apps para todos y todas</h4>
+          <p>Los dispositivos de Apple incluyen mecanismos para que las personas con distintas necesidades puedan usarlos y disfrutarlos, si conocemos dichos mecanismos podríamos estar construyendo aplicaciones que sin saberlo los excluyan y bloqueen imposibilitando que ciertos usuarios usen nuestra app. Conociendo estos mecanismos también podemos proveer una mejor usabilidad y experiencia a los usuarios con necesidades especiales.</p>
+        </div>
+      </article>
+
+      <article class="clear">
+        <div class="author">
+          <div class="personal">
+            <h4>Adrián Coria</h4>
+            <a href="http://twitter.com/imcoding" target="_blank">@imcoding</a>
+          </div>
+          <ul>
+            <li><a href="https://github.com/NSConfArg/2015/raw/master/Presentaciones/HealthKit.zip" target="_blank">Slides</a></li>
+          </ul>
+        </div>
+        <div class="text">
+          <h4>HealthKit</h4>
+          <p>Pequeña descripción de la charla: Que es HealthKit? Casos de uso y su alcance. Compliances y dudas frecuentes a la hora de trabajar con este Framework.</p>
+        </div>
+      </article>
+    </div>
+
+    <div id="year-2014" class="year">
+      <div class="links">
+        <a href="https://www.flickr.com/photos/123174867@N06/sets/72157643895662445" target="_blank">Fotos</a>
+      </div>
+      <article class="clear">
+        <div class="author">
+          <div class="personal">
+            <h4>Julio Carrettoni</h4>
+            <a href="http://twitter.com/dev_jac" target="_blank">@dev_jac</a>
+          </div>
+          <ul>
+            <li><a href="https://vimeo.com/album/2830564/video/91882414" target="_blank">Video</a></li>
+            <li><a href="https://github.com/NSConfArg/2014/raw/master/Presentaciones/Performance%20e%20Instrumentos.key.zip" target="_blank">Slides</a></li>
+            <li><a href="https://github.com/NSConfArg/NSConfArg-Rendimiento_e_instruments" target="_blank">Repo</a></li>
+          </ul>
+        </div>
+        <div class="text">
+          <h4>Performance e Instrumentos</h4>
+          <p>Como optimizar tiempos de carga y performance de una app iOS usando las herramientas provistas por Apple.</p>
+        </div>
+      </article>
+
+      <article class="clear">
+        <div class="author">
+          <div class="personal">
+            <h4>Gonzalo Larralde</h4>
+            <a href="http://twitter.com/gonzalolarralde" target="_blank">@gonzalolarralde</a>
+          </div>
+          <ul>
+            <li><a href="https://vimeo.com/album/2830564/video/93059357" target="_blank">Video</a></li>
+            <li><a href="https://github.com/NSConfArg/2014/raw/master/Presentaciones/Conectividad%20Multipunto.pdf" target="_blank">Slides</a></li>
+            <li><a href="https://github.com/NSConfArg/NSConfArg2014-MultipeerConnectivity" target="_blank">Repo</a></li>
+          </ul>
+        </div>
+        <div class="text">
+          <h4>Conectividad Multipunto en una Cáscara de Nuez</h4>
+          <p>A lo largo de esta charla vamos a discutir los detalles de implementación e integración de Multipeer Connectivity. Haciendo uso de este interesante framework introducido en iOS 7, vas a poder agregar una capa de colaboración a tus aplicaciones y juegos. Pero no todo es alegría, además de sus bondades, vamos a profundizar en sus limitaciones: como detectarlas y evitarlas.</p>
+        </div>
+      </article>
+
+      <article class="clear">
+        <div class="author">
+          <div class="personal">
+            <h4>Ezequiel Aceto</h4>
+            <a href="http://twitter.com/eaceto" target="_blank">@eaceto</a>
+          </div>
+          <ul>
+            <li><a href="https://vimeo.com/album/2830564/video/92443971" target="_blank">Video</a></li>
+            <li><a href="https://github.com/NSConfArg/2014/raw/master/Presentaciones/iBeacons.pdf" target="_blank">Slides</a></li>
+            <li><a href="https://github.com/NSConfArg/NSConfAR-iBeacon" target="_blank">Repo</a></li>
+          </ul>
+        </div>
+        <div class="text">
+          <h4>iBeacons</h4>
+          <p>Qué es un iBeacon? Usos de esta tecnologia y porque es tan interesante. Cómo encaja dentro del stack Bluetooth 4.0? El protocolo por dentro. Como construir un transmisor de iBeacons. CoreLocation y iBeacons en iOS. Detectar iBeacons desde iOS. Transmitir iBeacons desde iOS.</p>
+        </div>
+      </article>
+
+      <article class="clear">
+        <div class="author">
+          <div class="personal">
+            <h4>Nicolás Ameghino</h4>
+            <a href="http://twitter.com/nameghino" target="_blank">@nameghino</a>
+          </div>
+          <ul>
+            <li><a href="https://vimeo.com/album/2830564/video/93842661" target="_blank">Video</a></li>
+            <li><a href="https://github.com/NSConfArg/2014/raw/master/Presentaciones/Blocks.key.zip" target="_blank">Slides</a></li>
+            <li><a href="https://github.com/NSConfArg/nsconfarg14-blocks" target="_blank">Repo</a></li>
+          </ul>
+        </div>
+        <div class="text">
+          <h4>Blocks</h4>
+          <p>Una vueltita por la "nueva" feature de ObjC, que, pese a que parecen jeroglíficos feos, es súper útil. También revisamos GCD y vemos un par de maneras de aplicarlos. Ideal para los que siempre vieron el "^" con miedo!</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="grid">
+  <div class="col col-1"></div>
+  <div class="col col-2"></div>
+  <div class="col col-3"></div>
+  <div class="col col-4"></div>
+  <div class="col col-5"></div>
+  <div class="col col-6"></div>
+  <div class="col col-7"></div>
+  <div class="col col-8"></div>
+</section>
+
+
+	<script>
+var pkgVersion = '0.1.0';
+</script>
+<script src="assets/scripts/plugins.511774f1.js"></script>
+
+<script src="assets/scripts/main.0a3b8150.js"></script>
+
+<script src="/assets/scripts/aerolabWorkInProgressNotices.js"></script>
+
+
+</body>
 </html>

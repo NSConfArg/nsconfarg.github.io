@@ -550,7 +550,8 @@ a.invisibleLink {
     #inicio .text:last-child {
       margin-right: 0; }
     #inicio .text div {
-      border: 1px solid transparent;
+      border-width: 1px;
+      border-style: solid;
       border-image: linear-gradient(to right, #007CFF, #FF3052, #FFCB00);
       border-image-slice: 1;
       margin-right: 30px;
@@ -599,6 +600,7 @@ a.invisibleLink {
 
 body.proximamente #inicio .buttons,
 body.proximamente #inicio .text .full,
+body.proximamente #inicio .text .waiting-list,
 body.proximamente #inicio .text .past {
   display: none; }
 
@@ -606,8 +608,19 @@ body.proximamente #inicio .text,
 body.proximamente #inicio .text .register {
   display: block; }
 
+body.espera #inicio .buttons,
+body.espera #inicio .text .full,
+body.espera #inicio .text .register,
+body.espera #inicio .text .past {
+  display: none; }
+
+body.espera #inicio .text,
+body.espera #inicio .text .waiting-list {
+  display: block; }
+
 body.lleno #inicio .buttons,
 body.lleno #inicio .text .register,
+body.lleno #inicio .text .waiting-list,
 body.lleno #inicio .text .past {
   display: none; }
 
@@ -617,6 +630,8 @@ body.lleno #inicio .text .full {
 
 body.terminado #inicio .text .register,
 body.terminado #inicio .text .full,
+body.terminado #programa,
+body.terminado #inicio .text .waiting-list,
 body.terminado #inicio .buttons .register {
   display: none; }
 
@@ -871,8 +886,8 @@ body.terminado #inicio .text {
   float: left;
   display: block;
   margin-right: 0.1239157373%;
-  width: 62.4535315985%;
-  margin-left: 37.5464684015%;
+  width: 49.9380421314%;
+  margin-left: 25.0309789343%;
   counter-reset: info; }
   #info .wrap:last-child {
     margin-right: 0; }
@@ -907,10 +922,10 @@ body.terminado #inicio .text {
     #info article:nth-child(1):last-child {
       margin-right: 0; }
   #info article:nth-child(4) {
-    margin-left: 20.0396825397%;
     clear: both; }
   #info article .text {
-    border: 1px solid transparent;
+    border-width: 1px;
+    border-style: solid;
     border-image: linear-gradient(to right, #FF3052, #FF9500);
     width: 100%;
     padding: 0 20px 30px 20px;
@@ -932,16 +947,47 @@ body.terminado #inicio .text {
     border-image-slice: 1; }
   #info article:nth-child(3):before {
     color: #45D852;
-    top: -40px;
     left: auto;
     right: 10px; }
   #info article:nth-child(3) .text {
     border-image: linear-gradient(to right, #FFCB00, #45D852);
-    border-image-slice: 1; }
+    border-image-slice: 1;
+    background: rgba(255, 255, 255, 0.6) url("../images/map-small.4d1aac6b.png") 80% 0;
+    transition: background-color 0.5s;
+    position: relative;
+    display: block; }
+    #info article:nth-child(3) .text:hover {
+      color: #8F8E94 !important;
+      background-color: rgba(255, 255, 255, 0); }
+    #info article:nth-child(3) .text:before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: inherit;
+      content: ' '; }
+    #info article:nth-child(3) .text:after {
+      position: absolute;
+      border: 4px solid #fff;
+      content: ' ';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
+    #info article:nth-child(3) .text h4, #info article:nth-child(3) .text p {
+      position: relative; }
   #info article:nth-child(4):before {
     color: #FF9500; }
   #info article:nth-child(4) .text {
     border-image: linear-gradient(to right, #FF9500, #FFCB00);
+    border-image-slice: 1; }
+  #info article:nth-child(5):before {
+    color: #F400FF;
+    left: auto;
+    right: -8px; }
+  #info article:nth-child(5) .text {
+    border-image: linear-gradient(to right, #7A00FF, #F400FF);
     border-image-slice: 1; }
 
 #info .misc .big {
@@ -955,16 +1001,31 @@ body.terminado #inicio .text {
 
 #info .misc .small:nth-child(3) {
   left: 25%;
-  top: 60%; }
+  top: 95%; }
+
+@keyframes animatedBackground {
+  from {
+    rgba(255, 255, 255, 0.4) { } }
+  to {
+    rgba(255, 255, 255, 0) { } } }
 
 @media screen and (min-width: 1600px) {
   #info .wrap {
-    margin-left: 25.0309789343%;
     padding-top: 340px; }
   #info article:nth-child(1) p {
     width: 85%; }
+  #info article:nth-child(3), #info article:nth-child(5) {
+    width: 37%; }
+    #info article:nth-child(3):before, #info article:nth-child(5):before {
+      right: -18px; }
   #info .misc .small:nth-child(3) {
-    top: 65%; } }
+    top: 95%; } }
+
+@media screen and (max-width: 1600px) and (min-width: 1025px) {
+  #info article:nth-child(3), #info article:nth-child(5) {
+    width: 37%; }
+    #info article:nth-child(3):before, #info article:nth-child(5):before {
+      right: -10px !important; } }
 
 @media screen and (max-width: 1025px) and (min-width: 769px) {
   #info .wrap {
@@ -983,7 +1044,11 @@ body.terminado #inicio .text {
     margin-left: -15px; }
   #info .misc .small:nth-child(3) {
     left: 33.32%;
-    top: 80%; } }
+    top: 95%; }
+  #info article:nth-child(3), #info article:nth-child(5) {
+    width: 47%; }
+    #info article:nth-child(3):before, #info article:nth-child(5):before {
+      right: -8px !important; } }
 
 @media screen and (max-width: 1025px) and (min-width: 481px) {
   #info article {
@@ -1004,20 +1069,22 @@ body.terminado #inicio .text {
         margin-right: 0; }
     #info article:nth-child(2), #info article:nth-child(3) {
       margin-right: 0; }
-    #info article:nth-child(4) {
-      margin-left: 50.1240694789%; } }
+    #info article:nth-child(3):before, #info article:nth-child(5):before {
+      right: -8px !important; } }
 
 @media screen and (max-width: 768px) and (min-width: 601px) {
   #info .wrap {
     float: left;
     display: block;
     margin-right: 0.2481389578%;
-    width: 100%;
-    margin-left: 0%; }
+    width: 74.9379652605%;
+    margin-left: 25.0620347395%; }
     #info .wrap:last-child {
       margin-right: 0; }
   #info article:before {
     display: none; }
+  #info article:nth-child(3):before, #info article:nth-child(5):before {
+    right: -8px !important; }
   #info .misc .big {
     left: 50%;
     margin-left: 18px; }
@@ -1026,7 +1093,7 @@ body.terminado #inicio .text {
     margin-left: -20px; }
   #info .misc .small:nth-child(3) {
     left: 25%;
-    top: 80%;
+    top: 95%;
     margin-left: 10px; } }
 
 @media screen and (max-width: 600px) {
@@ -1066,13 +1133,13 @@ body.terminado #inicio .text {
       padding-right: 0; }
       #info article:last-child {
         margin-right: 0; }
-      #info article:nth-child(1), #info article:nth-child(4) {
+      #info article:nth-child(1), #info article:nth-child(3), #info article:nth-child(4), #info article:nth-child(5) {
         float: left;
         display: block;
         margin-right: 0.4975124378%;
         width: 100%;
         margin-left: 0; }
-        #info article:nth-child(1):last-child, #info article:nth-child(4):last-child {
+        #info article:nth-child(1):last-child, #info article:nth-child(3):last-child, #info article:nth-child(4):last-child, #info article:nth-child(5):last-child {
           margin-right: 0; }
       #info article:before {
         display: none; } }
@@ -1128,7 +1195,8 @@ body.terminado #inicio .text {
       background: #fff;
       margin-bottom: 5px; }
   #programa article .text {
-    border: 1px solid transparent;
+    border-width: 1px;
+    border-style: solid;
     border-image: linear-gradient(to right, #FF3052, #FF9500);
     padding: 0 20px 30px 20px;
     width: calc(75% - 30px);
@@ -1594,7 +1662,8 @@ body.terminado #inicio .text {
     flex-flow: column;
     -webkit-justify-content: space-between;
     justify-content: space-between;
-    border: 1px solid transparent;
+    border-width: 1px;
+    border-style: solid;
     padding: 15px 20px;
     background: #fff; }
   #archivo article:nth-child(1) .author, #archivo article:nth-child(1) .text, #archivo article:nth-child(6) .author, #archivo article:nth-child(6) .text {
@@ -1631,7 +1700,14 @@ body.terminado #inicio .text {
     left: 12.5%;
     top: 70%; }
   #archivo .links {
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    border-image: linear-gradient(to bottom, #FF0000, #FF9700);
+    border-image-slice: 1;
+    border-style: solid;
+    padding: 18px 25px;
+    width: 238px;
+    height: 68px;
+    border-width: 1px; }
     #archivo .links a {
       color: #8F8E94;
       text-decoration: none;
@@ -1759,6 +1835,8 @@ body.terminado #inicio .text {
   #archivo {
     padding-top: 100px;
     padding-bottom: 60px; }
+    #archivo .links {
+      width: 162px; }
     #archivo .misc {
       position: static;
       padding: 0 20px; }

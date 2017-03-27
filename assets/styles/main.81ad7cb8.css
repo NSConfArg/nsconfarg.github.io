@@ -562,7 +562,8 @@ a.invisibleLink {
     padding-top: 100px; }
   #inicio a {
     display: inline-block;
-    border: 1px solid transparent;
+    border-style: solid;
+    border-width: 1px;
     border-image: linear-gradient(to right, #007CFF, #FF3052, #FFCB00);
     border-image-slice: 1;
     color: #3A3940;
@@ -627,6 +628,9 @@ body.lleno #inicio .text .past {
 body.lleno #inicio .text,
 body.lleno #inicio .text .full {
   display: block; }
+
+body.lleno #inicio .text .waiting-list-btn {
+  display: inline-block; }
 
 body.terminado #inicio .text .register,
 body.terminado #inicio .text .full,
@@ -1213,7 +1217,8 @@ body.terminado #inicio .text {
     #programa article .author img {
       width: 100%;
       padding: 4px;
-      border: 1px solid transparent;
+      border-width: 1px;
+      border-style: solid;
       background: #fff; }
     #programa article .author h4 {
       margin-bottom: 0; }
@@ -1759,7 +1764,8 @@ body.terminado #inicio .text {
   #archivo article {
     -webkit-flex-flow: column-reverse;
     flex-flow: column-reverse;
-    border: 1px solid transparent; }
+    border-style: solid;
+    border-width: 1px; }
     #archivo article .author {
       width: 100%;
       margin: 0;

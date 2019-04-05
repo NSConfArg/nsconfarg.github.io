@@ -560,7 +560,7 @@ a.invisibleLink {
   #inicio .buttons {
     margin-left: 40.0793650794%;
     padding-top: 100px; }
-  #inicio a {
+  #inicio a.inicio-btn {
     display: inline-block;
     border-style: solid;
     border-width: 1px;
@@ -573,7 +573,7 @@ a.invisibleLink {
     margin-right: 15px;
     background: #fff;
     transition: all ease-in-out .15s; }
-    #inicio a:after {
+    #inicio a.inicio-btn:after {
       content: "";
       display: block;
       width: 0;
@@ -585,9 +585,9 @@ a.invisibleLink {
       right: -1px;
       transform: rotate(-45deg);
       -webkit-transform: rotate(-45deg); }
-    #inicio a:hover {
+    #inicio a.inicio-btn:hover {
       color: #0076FE; }
-    #inicio a.past {
+    #inicio a.inicio-btn.past {
       display: none; }
   #inicio .misc .big {
     left: 75%;
@@ -1988,6 +1988,20 @@ body.terminado #inicio .text {
     #navigation li.current a:before {
       border: 1px solid #0076FE;
       background: #0076FE; }
+
+#footer {
+  position: absolute;
+  bottom: 26px;
+  left: 26px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #333;
+  text-align: left;
+  display: block; }
+  #footer img {
+    display: block;
+    width: 70px;
+    height: 70px; }
 
 #btn-twitter {
   position: fixed;
